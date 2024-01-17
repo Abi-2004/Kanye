@@ -58,11 +58,6 @@
     <br>
     <br>
     
-    <div class="nb" >
-      <img src="img/noti3.webp" alt="">
-      <h3>Kanye West pagará a Kim Kardashian más de 190.000 euros al mes de pensión tras llegar a un acuerdo de divorcio</h3>
-      <p>Kim Kardashian y Kanye West han finalizado su divorcio tras más de un año y medio. La expareja ha acordado la custodia de sus cuatro hijos y el reparto de sus bienes.</p>
-    </div>
 </div>
 
 
