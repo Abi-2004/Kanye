@@ -76,7 +76,6 @@
 .nb {
   position: relative;
   margin-top: 25px;
-  flex-wrap: wrap;
   margin-bottom: 25px;
   margin-left: 25px; /* Adjusted margin for better spacing */
   height: 370px;
