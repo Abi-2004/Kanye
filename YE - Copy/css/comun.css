@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "Aldo the Apache";
+    src: url("AldotheApache.ttf") format("truetype");
+  }
+
+
+  body{
+    font-family: 'Aldo the Apache', sans-serif;
+  }
+
+header{
+    padding: 20px;
+    color: #e6dfcc;
+    background-color: #f58b57;
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0;
+
+    font-size: larger;
+    font-weight: 900;
+}
+
+footer{
+    background-color: #a75f3b;
+    padding: 15px;
+    text-align: center;
+    
+}
+
+
+
+
+/* barra empieza_______________________________________________*/
+
+.barra {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e6dfcc;
+  width: 50%;
+  margin: auto;
+  margin-top: 0.1cm;
+  margin-bottom: 2cm;
+}
+
+.barra a {
+  text-decoration: none;
+  color: #412517;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.barra a:hover {
+  background-color: #f58b57;
+  color: #7acec2;
+}
+.dropdown-li2,
+.dropdown-li {
+  position: relative;
+  list-style: none;
+}
+
+.dropdown-li:hover  .dropdown {
+  display: block;
+}
+.dropdown-li2:hover .dropdown2 {
+  display: block;
+}
+
+
+.dropdown2{
+  
+    display: none;
+    position: absolute;
+    left: -50px;
+    top: 75%;
+    width: 10em;
+    height: 5em;
+    background-color: #e6dfcc;
+    padding-left: 0;
+    z-index: 3;
+  
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  left: -50px;
+  top: 75%;
+  width: 10em;
+  height: 8em;
+  background-color: #e6dfcc;
+  padding-left: 0;
+  z-index: 3;
+}
+
+.dropdown a {
+  display: block;
+  text-align: center;
+}
+.dropdown2 a {
+  display: block;
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .barra {
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+  }
+
+
+  .barra a {
+    border: 1px black solid;
+    margin: 10px;
+    width: 5cm;
+    
+  }
+
+  .dropdown {
+    position: static;
+    display: block;
+    width: 100%;
+    top: auto;
+    margin-top: 10px;
+    width: 5cm;
+    
+    
+  }
+
+  .dropdown a {
+    margin-top: 10px;
+    width: 5cm;
+    text-align: center;
+    
+  }
+}
+
+  /* barra fin_______________________________________________*/

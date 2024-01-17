@@ -1,0 +1,42 @@
+footer{
+    margin-top: 10%;
+  }
+
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  color: #412517;
+  font-size: 18px;
+  margin: auto;
+  border-radius: 100px;
+}
+
+th, td {
+  text-align: center;
+  border: 2px solid #412517;
+}
+
+th {
+  background-color: #a75f3b;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  background-color: #7acec2;
+  padding: 10px;
+}
+
+tr:hover {background-color: #f58b57;}
+
+.button {
+  display: inline-block;
+  background-color: #a75f3b;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
