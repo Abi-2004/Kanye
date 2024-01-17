@@ -61,76 +61,66 @@
   /*Termina tecker aqui____________________________*/
 
 /*comienzo de noticia_______________________________*/
-  .newsblock{
-    height: 400px;
-    width: 100%;
-    background-color: #7acec2;
-    margin-bottom: 10px;
-    display: flex;
-    transition: 3s;
-    
+  .newsblock {
+  height: 400px;
+  width: 100%;
+  background-color: #7acec2;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-around; /* Center items horizontally */
+  transition: 3s;
+}
+
+.nb {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px; /* Adjusted margin for better spacing */
+  height: 370px;
+  width: 300px; /* Adjusted width for better responsiveness */
+  background-color: #e6dfcc;
+  color: #412517;
+  display: inline-block;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+@media only screen and (max-width: 1500px) {
+  .newsblock {
+    height: auto; /* Remove fixed height for responsiveness */
   }
-  
+
   .nb {
-    position: relative  ;
-    margin-top: 25px;
-    margin-bottom: auto;
-    margin-left: 95px;
-    height: 370px;
-    width: 500px; 
-    background-color: #e6dfcc;
-    color: #412517;
-    display: inline-block;
-    border-radius: 10px;
-    
-    transition: 1s;
+    width: 90%; /* Adjusted width for better responsiveness */
+    margin: 0 auto; /* Center the blocks horizontally */
   }
+}
 
-    @media only screen and (max-width: 1500px) {
-      
-      
-      .newsblock{
-        height: 1400px;
-        flex-direction: column;
-        width: 100%;
-        
-      }
-     
-     .nb{
-      margin-left: 25%;
-     }
-      
-       
-    }
+.nb:hover {
+  transform: scale(1.1); /* Corrected the property name */
+  box-shadow: 3px 3px 5px black; /* Added spread to the box-shadow */
+}
 
-
-    
- 
-
-  .nb:hover{
-    scale: 1.1;
-    box-shadow:3px black;
-  }
-
-  .nb img {
-    margin-top: 0.30cm;
-    margin-left: 20%;
-    height: 170px;
-    width: 330px;
-    border-radius: 10px;
-  }
+.nb img {
+  margin-top: 0.30cm;
+  margin-left: auto; /* Center the image horizontally */
+  margin-right: auto;
+  height: 170px;
+  width: 80%; /* Adjusted width for better responsiveness */
+  border-radius: 10px;
+}
 
 .nb h3 {
   text-align: center;
-} 
+}
 
- .nb p {
+.nb p {
   text-align: center;
   margin-right: 5px;
   margin-top: -0.2cm;
- }
-
-/*fin_______________________________*/
+}
+/* fine__________*/
 
 
 #seg{
