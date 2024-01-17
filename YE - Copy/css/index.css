@@ -70,11 +70,13 @@
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   justify-content: space-around; /* Center items horizontally */
   transition: 3s;
+  overflow-x: auto;
 }
 
 .nb {
   position: relative;
   margin-top: 25px;
+  flex-wrap: wrap;
   margin-bottom: 25px;
   margin-left: 25px; /* Adjusted margin for better spacing */
   height: 370px;
