@@ -5,7 +5,7 @@ function connect() {
     $host = '44.195.114.107';
     $username = 'abi';
     $password = 'Dahal123';
-    $database = 'nombre_de_tu_base_de_datos'; // Reemplaza con el nombre de tu base de datos
+    $database = 'autor'; // Reemplaza con el nombre de tu base de datos
 
     // Crear una conexión a la base de datos
     $conn = new mysqli($host, $username, $password, $database);
