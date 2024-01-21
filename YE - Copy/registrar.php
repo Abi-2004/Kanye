@@ -34,15 +34,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verifica si la inserción fue exitosa
         if ($result) {
-            header:index.php;
+            // Registro exitoso, redirige a la página principal o a donde desees
+            header("Location: index.php");
+            exit;
         } else {
-            echo "Error al registrar. Por favor, inténtalo de nuevo.";
+            // Error en la inserción, redirige a la página de registro con un mensaje de error
+            header("Location: reg.php?error=1");
+            exit;
         }
 
         // Cierra la conexión
         mysqli_close($conn);
     } else {
-        echo "Error de conexión a la base de datos.";
+        // Error de conexión a la base de datos, redirige a la página de registro con un mensaje de error
+        header("Location: reg.php?error=2");
+        exit;
     }
 }
 ?>
