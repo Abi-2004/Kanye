@@ -109,8 +109,9 @@
   right: 50%;
   left: 50%;
   align-self: center;
-  height: auto;
-  width: auto;
+  margin-left: 15%;
+  height: 170px;
+  width: 330px;
   border-radius: 10px;
 }
 
