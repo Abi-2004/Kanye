@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label for="foto">Subir Foto:</label>
-                <input type="file" id="foto" name="foto" accept="image/*" onchange="displaySelectedFile()">
+                <input type="file" id="foto" name="foto" accept="image/*" onchange="pito()">
                 <label class="btn-upload" for="foto">Seleccionar Foto</label>
                 <span class="selected-file" id="selectedFile"></span>
             </div>
@@ -46,7 +46,7 @@
     </footer>
 
     <script>
-        function displaySelectedFile() {
+        function pito() {
             var fileInput = document.getElementById('foto');
             var selectedFile = document.getElementById('selectedFile');
 

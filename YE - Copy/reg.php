@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Autor</title>
+    <title>Registro de Usuario</title>
     <link rel="stylesheet" href="css/comun.css">
-    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="css/fan.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-
+        /* Tu estilo CSS aquí */
     </style>
 </head>
 <body>
     
     <header>
-        <h1>Registrar autor</h1>
+        <h1>Fan club</h1>
     </header>
 
     <?php include_once "menu.php"; ?>
 
     <div class="container">
-        <h2>Registro de Autor</h2>
-        <form>
+        <h2>Registro de Usuario</h2>
+        <form action="registrar.php" method="post">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -50,5 +50,6 @@
         <h4>COPYRIGHT © Abiral Dahal</h4>
         <h5>2024</h5>
     </footer>
+
 </body>
 </html>
