@@ -27,14 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Realiza la inserción en la base de datos
-        $query = "INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `usuario`, `password`, `email`) 
+        $query = "INSERT INTO `autor` (`id_aut`, `nombre`, `apellido`, `usuario`, `password`, `email`) 
                   VALUES (NULL, '$nombre', '$apellido', '$usuario', '$hashed_password', '$email')";
 
         $result = mysqli_query($conn, $query);
 
         // Verifica si la inserción fue exitosa
         if ($result) {
-            echo "Registro exitoso. ¡Bienvenido, $nombre!";
+            header:index.php;
         } else {
             echo "Error al registrar. Por favor, inténtalo de nuevo.";
         }
