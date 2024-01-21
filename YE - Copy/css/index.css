@@ -94,7 +94,7 @@
   }
 
   .nb {
-    width: 80%; /* Adjust the width based on your preference */
+    width: auto; /* Adjust the width based on your preference */
     margin: 10px auto;
   }
 }
