@@ -78,8 +78,8 @@
   margin-bottom: 25px;
   margin-left: 0px;
   margin-right: 0px;
-  height: 370px;
-  width: calc(30.33% - 150px); /* Adjust the width based on the number of items per row */
+  height: auto;
+  width: calc(30.33% - 100px); /* Adjust the width based on the number of items per row */
   background-color: #e6dfcc;
   color: #412517;
   display: inline-block;
