@@ -61,74 +61,67 @@
   /*Termina tecker aqui____________________________*/
 
 /*comienzo de noticia_______________________________*/
-  .newsblock{
-    height: 400px;
-    width: 100%;
-    background-color: #7acec2;
-    margin-bottom: 10px;
-    display: flex;
-    transition: 3s;
+.newsblock {
+  height: auto;
+  width: 100%;
+  background-color: #7acec2;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  transition: 3s;
+}
 
+.nb {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 370px;
+  width: calc(33.33% - 150px); /* Adjust the width based on the number of items per row */
+  background-color: #e6dfcc;
+  color: #412517;
+  display: inline-block;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+@media only screen and (max-width: 1500px) {
+  .newsblock {
+    height: auto;
+    flex-direction: column;
   }
 
   .nb {
-    position: relative  ;
-    margin-top: 25px;
-    margin-bottom: auto;
-    margin-left: 95px;
-    height: 370px;
-    width: 500px; 
-    background-color: #e6dfcc;
-    color: #412517;
-    display: inline-block;
-    border-radius: 10px;
-
-    transition: 1s;
+    width: 80%; /* Adjust the width based on your preference */
+    margin: 10px auto;
   }
+}
 
-    @media only screen and (max-width: 1500px) {
+.nb:hover {
+  transform: scale(1.1);
+  box-shadow: 3px 3px 5px black;
+}
 
-
-      .newsblock{
-        height: 1400px;
-        flex-direction: column;
-        width: 100%;
-
-      }
-
-     .nb{
-      margin-left: 25%;
-     }
-
-
-    }
-
-
-
-
-
-  .nb:hover{
-    scale: 1.1;
-    box-shadow:3px black;
-  }
-
-  .nb img {
-    margin-top: 0.30cm;
-    margin-left: 20%;
-    height: 170px;
-    width: 330px;
-    border-radius: 10px;
-  }
+.nb img {
+  margin-top: 0.30cm;
+  margin-left: 20%;
+  height: 170px;
+  width: 330px;
+  border-radius: 10px;
+}
 
 .nb h3 {
   text-align: center;
-} 
+}
 
- .nb p {
+.nb p {
   text-align: center;
   margin-right: 5px;
   margin-top: -0.2cm;
- }
+}
+
 
 /*fin_______________________________*/
 
