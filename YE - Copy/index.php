@@ -52,11 +52,11 @@
       <img src="img/noti3.webp" alt="">
       <h3>Kanye West pagará a Kim Kardashian más de 190.000 euros al mes de pensión tras llegar a un acuerdo de divorcio</h3>
     </div>
-    <div class="nb2" >
+    <div class="nb" >
       <img src="img/noti3.webp" alt="">
       <h3>Kanye West pagará a Kim Kardashian más de 190.000 euros al mes de pensión tras llegar a un acuerdo de divorcio</h3>
     </div>
-    <div class="nb2" >
+    <div class="nb" >
       <img src="img/noti3.webp" alt="">
       <h3>Kanye West pagará a Kim Kardashian más de 190.000 euros al mes de pensión tras llegar a un acuerdo de divorcio</h3>
     </div>
