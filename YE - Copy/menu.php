@@ -17,7 +17,7 @@ echo '<div class="barra">
         <ul class="dropdown">
           <a href="#">Publicar</a>
           <a href="reg.php">Registrar</a>
-          <a href="#">Log in </a>
+          <a href="log.php">Log in </a>
         </ul>
       </li>
       

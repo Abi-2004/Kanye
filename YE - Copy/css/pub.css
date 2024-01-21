@@ -26,8 +26,8 @@
 }
 
 .form-group input[type="text"],
-.form-group input[type="password"] {
-    width: 80%;
+.form-group textarea {
+    width: 100%;
     padding: 10px;
     border: 1px solid #a75f3b;
     border-radius: 5px;
@@ -37,12 +37,20 @@
     background-color: #f58b57;
 }
 
+.form-group textarea {
+    height: 150px;
+}
+
 .form-group input[type="text"]:focus,
-.form-group input[type="password"]:focus {
+.form-group textarea:focus {
     border: 1px solid #2c48c4;
 }
 
-.btn-login {
+.form-group input[type="file"] {
+    display: none;
+}
+
+.btn-upload {
     background-color: #f58b57;
     color: white;
     padding: 10px 20px;
@@ -50,4 +58,9 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+.selected-file {
+    color: #2c48c4;
+    font-weight: bold;
 }
