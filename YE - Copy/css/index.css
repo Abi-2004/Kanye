@@ -106,6 +106,8 @@
 
 .nb img {
   margin-top: 0.30cm;
+  right: 50%;
+  left: 50%;
   align-self: center;
   height: 170px;
   width: 330px;
