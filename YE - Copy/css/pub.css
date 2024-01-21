@@ -48,6 +48,7 @@
 
 .form-group input[type="file"] {
     display: none;
+    width: 50%;
 }
 
 .btn-upload {
