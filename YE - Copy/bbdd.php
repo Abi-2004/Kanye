@@ -44,6 +44,7 @@
         return $noticias;
     }
     
+    
     function checkDatabaseConnection()
     {
         $mysqli = new mysqli("44.195.114.107", "abi", "Dahal123", "kanye");
