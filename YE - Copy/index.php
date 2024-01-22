@@ -47,16 +47,16 @@ $noticias = noticia();
 
 ?>
 
-      <div class="newsblock">
-        <?php 
-        for ($i = 0; $i < 5; $i++) {
-            echo '<div class="nb">';
-            echo '  <img src="img/'.$noticias[$i]['img'].'" alt="imagen de noticia">';
-            echo '  <H3>'.$noticias[$i]['titulo'].'</H3>';
-            echo '</div>';
-        }
-        ?>
-    </div>
+<div class="newsblock">
+    <?php 
+    for ($i = 0; $i < 5; $i++) {
+        echo '<div class="nb">';
+        echo '  <img src="img/'.$noticias[$i]['img'].'" alt="imagen de noticia">';
+        echo '  <h3>'.$noticias[$i]['titulo'].'</h3>';
+        echo '</div>';
+    }
+    ?>
+</div>
 <!--
     <div class="nb" >
       <img src="img/noti1.webp" alt="">
