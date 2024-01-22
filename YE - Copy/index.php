@@ -56,7 +56,7 @@ $noticias = noticia();
         echo '</div>';
     }
     ?>
-</div>
+
 
 <!--
     <div class="nb" >
@@ -80,6 +80,8 @@ $noticias = noticia();
       <h3>Kanye West pagará a Kim Kardashian más de 190.000 euros al mes de pensión tras llegar a un acuerdo de divorcio</h3>
     </div>
 -->
+
+
 </div>
 
 
