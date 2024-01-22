@@ -8,41 +8,42 @@
         }
         return $mysqli;
     }
-
     function noticia()
     {
         $mysqli = connect_database();
-    
-        $sql = "SELECT id_noticia, nombre FROM noticias";
-    
+        
+        $sql = "SELECT id_not, titulo, img FROM noticias";
+        
         $sentencia = $mysqli->prepare($sql);
         if (!$sentencia) {
             echo "Fallo en la preparación de la sentencia: " . $mysqli->errno;
         }
-    
+        
         $ejecucion = $sentencia->execute();
         if (!$ejecucion) {
             echo "Fallo en la ejecucion: " . $mysqli->errno;
         }
-    
+        
         $noticias = array(); 
-    
-        $id_noticia = -1; 
-        $nombre = "";
-    
-        $vincular = $sentencia->bind_result($id_noticia, $nombre);
+        
+        $id_not = -1; 
+        $titulo = "";
+        $img = ""; 
+        
+        $vincular = $sentencia->bind_result($id_not, $titulo, $img);
         if (!$vincular) {
             echo "Fallo al vincular la sentencia: " . $mysqli->errno;
         }
-    
+        
         while ($sentencia->fetch()) {
-            $noticia = array('idnoticia' => $id_noticia, 'nombre' => $nombre);
+            $noticia = array('id_noticia' => $id_not, 'titulo' => $titulo, 'img' => $img);
             $noticias[] = $noticia; 
         }
-    
+        
         $mysqli->close();
         return $noticias;
     }
+    
     
 
     ?>
