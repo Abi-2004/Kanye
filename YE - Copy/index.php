@@ -40,6 +40,21 @@
 
 <div class="newsblock" >
 
+<?php 
+
+include_once 'bbdd.php';
+
+$noticias = noticia();
+
+for ($i = 0; $i < 5; $i++) {
+  echo '<div class="nb">';
+  echo '  <img src="img/'.$noticias[$i]['imagen'].'" alt="imagen de noticia">';
+  echo '  <H3>'.$noticias[$i]['titulo'].'</H3>';
+  echo '</div>';
+}
+
+?>
+<!--
     <div class="nb" >
       <img src="img/noti1.webp" alt="">
       <H3>La transformación de Bianca Censori: el antes y el después de su relación con Kanye West</H3>
@@ -60,10 +75,7 @@
       <img src="img/noti3.webp" alt="">
       <h3>Kanye West pagará a Kim Kardashian más de 190.000 euros al mes de pensión tras llegar a un acuerdo de divorcio</h3>
     </div>
-    
-    <br>
-    <br>
-    
+-->
 </div>
 
 
