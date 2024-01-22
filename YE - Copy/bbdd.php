@@ -44,6 +44,29 @@
         return $noticias;
     }
     
+    function checkDatabaseConnection()
+    {
+        $mysqli = new mysqli("44.195.114.107", "abi", "Dahal123", "kanye");
     
+        // Check if there is a connection error
+        if ($mysqli->connect_errno) {
+            return false; // Connection failed
+        }
+    
+        // Check if the server is alive
+        if ($mysqli->ping()) {
+            $mysqli->close(); // Close the connection
+            return true; // Connection successful
+        } else {
+            return false; // Server is not responding
+        }
+    }
+    
+    // Example usage
+    if (checkDatabaseConnection()) {
+        echo "Connected to the database!";
+    } else {
+        echo "Failed to connect to the database!";
+    }
 
     ?>

@@ -57,6 +57,7 @@ $noticias = noticia();
     }
     ?>
 </div>
+
 <!--
     <div class="nb" >
       <img src="img/noti1.webp" alt="">
