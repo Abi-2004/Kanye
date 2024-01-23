@@ -75,7 +75,7 @@
     {
         $mysqli = connect_database();
 
-        $sql = "SELECT user FROM usuario WHERE user = ? 
+        $sql = "SELECT user FROM autor WHERE user = ? 
             AND password = ?";
             
         $sentencia = $mysqli->prepare($sql);
