@@ -21,7 +21,7 @@
 
     <div class="container">
         <h2>Iniciar Sesión</h2>
-        <form>
+        <form method="post" action="iniciarSesion.php" >
             <div class="form-group">
                 <label for="usuario">Usuario:</label>
                 <input type="text" id="usuario" name="usuario" required>
