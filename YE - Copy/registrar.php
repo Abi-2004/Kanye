@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $result = mysqli_query($conn, $query);
 
+        var_dump($query);
         // Verifica si la inserción fue exitosa
         if ($result) {
             // Registro exitoso, redirige a la página principal o a donde desees
