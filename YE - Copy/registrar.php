@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
 
     // Conecta a la base de datos
-    $conn = connect();
+    $conn = connect_database();
 
     // Verifica si la conexión fue exitosa
     if ($conn) {
