@@ -70,4 +70,48 @@
         echo "Failed to connect to the database!";
     }
 
+
+    function login($user, $password)
+    {
+        $mysqli = connect_database();
+
+        $sql = "SELECT user FROM usuario WHERE user = ? 
+            AND password = ?";
+            
+        $sentencia = $mysqli->prepare($sql);
+        if(!$sentencia)
+        {
+            echo "Fallo en la preparación de la sentencia".$mysqli->errno;
+        }
+
+        $asignar = $sentencia->bind_param("ss", $user, $password);
+        if(!$asignar)
+        {
+            echo "Fallo en la asignación ".$mysqli->errno;
+        }
+
+        $ejecucion = $sentencia->execute();
+        if(!$ejecucion)
+        {
+            echo "Fallo en la ejecución ".$mysqli->errno;
+        }
+
+        $usuario = "";
+        $vincular = $sentencia->bind_result($usuario);
+        if(!$vincular)
+        {
+            echo "Fallo al asociar parámetros ".$mysqli->errno;
+        }
+
+        $result = false;
+        if($sentencia->fetch())
+        {
+            $result = true;
+        }
+
+        $mysqli->close();
+        return $result;
+    }
+
+
     ?>
