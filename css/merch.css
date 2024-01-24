@@ -1,0 +1,61 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .girar-box {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+  }
+
+  .girar-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition:  1s; 
+    transform-style: preserve-3d;
+  }
+
+  .girar-box:hover .girar-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .girar-alante,
+  .girar-atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .girar-alante {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .girar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .girar-atras {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .girar-atras h2,
+  .girar-atras p {
+    margin: 0;
+  }
