@@ -149,16 +149,16 @@
     function getNoticiaById($id) {
         $mysqli = connect_database();
         
-        $sql = "SELECT id_not, titulo, img, cont FROM noticias WHERE id_not = ? LIMIT 1";
+        $sql = "SELECT id_not, titulo, img, content FROM noticias WHERE id_not = ? LIMIT 1";
         
         $sentencia = $mysqli->prepare($sql);
         $sentencia->bind_param("i", $id);
         $sentencia->execute();
     
-        $sentencia->bind_result($id_not, $titulo, $img, $cont);
+        $sentencia->bind_result($id_not, $titulo, $img, $content);
         $sentencia->fetch();
     
-        $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img, 'cont' => $cont);
+        $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img, 'content' => $content);
     
         $mysqli->close();
     
