@@ -152,34 +152,35 @@
     function getNoticiaById($id) {
         $mysqli = connect_database();
         
-        $sql = "SELECT id_not, titulo, img FROM noticias WHERE id_not = ?";
-    
+        $sql = "SELECT id_not, titulo, img, contenido FROM noticias WHERE id_not = ?";
+        
         $sentencia = $mysqli->prepare($sql);
         if (!$sentencia) {
             die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
         }
-    
+        
         $sentencia->bind_param("i", $id);
-    
+        
         $ejecucion = $sentencia->execute();
         if (!$ejecucion) {
             die("Fallo en la ejecución: " . $sentencia->error);
         }
-    
-        $vincular = $sentencia->bind_result($id_not, $titulo, $img);
+        
+        $vincular = $sentencia->bind_result($id_not, $titulo, $img, $content);
         if (!$vincular) {
             die("Fallo al vincular la sentencia: " . $sentencia->error);
         }
-    
+        
         $sentencia->fetch();
-    
-        $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img);
-    
+        
+        $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img, 'content' => $content);
+        
         $sentencia->close();
         $mysqli->close();
-    
+        
         return $noticia;
     }
+    
     
 
 
