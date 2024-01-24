@@ -48,8 +48,8 @@ if (isset($_GET['id_not'])) {
 
     // Display the title, image, and content
     echo '<h2 class="notit" >'.$noticia['titulo'].'</h2>';
-    echo '<img src="img/'.$noticia['img'].'" alt="imagen de noticia">';
-    echo '<p>'.$noticia['content'].'</p>';
+    echo '<img class="notimg" src="img/'.$noticia['img'].'" alt="imagen de noticia">';
+    echo '<p class="notcont" >'.$noticia['content'].'</p>';
     
     // Author box
     echo '<div class="author-box">';
