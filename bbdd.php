@@ -158,7 +158,7 @@
         $sentencia->bind_result($id_not, $titulo, $img, $cont);
         $sentencia->fetch();
     
-        $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img, 'cont' => $contenido);
+        $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img, 'cont' => $cont);
     
         $mysqli->close();
     
