@@ -25,12 +25,12 @@
 include_once 'bbdd.php'; // Include your database connection file
  // Include the functions file
 
-/*
+
 if (isset($_GET['id_not'])) {
     var_dump($noticiaId);
     $noticiaId = $_GET['id_not'];*/
 
-    $noticia = getNoticiaById("8");
+    $noticia = getNoticiaById("id_not");
 
 
     // Display the title, image, and content
@@ -41,11 +41,11 @@ if (isset($_GET['id_not'])) {
     echo '<div class="author-box">';
     echo '<h4> 🔔 Publicado por Abiral</h4>';
     echo '</div>';
-    /*
+    
 } else {
     echo 'Invalid news ID.';
 }
-*/
+
 ?>
 
     <footer>
