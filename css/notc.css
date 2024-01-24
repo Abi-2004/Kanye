@@ -84,6 +84,6 @@ h4, h5 {
 
 a{
     color: black;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
 }
