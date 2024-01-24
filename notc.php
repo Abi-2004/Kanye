@@ -43,7 +43,7 @@ if (isset($_GET['id_not'])) {
     var_dump($noticiaId);
     $noticiaId = $_GET['id_not'];*/
 
-    $noticia = noticia(8);
+    $noticia = noticia("8");
 
     // Display the title, image, and content
     echo '<h2>'.$noticia['titulo'].'</h2>';
