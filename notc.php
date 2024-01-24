@@ -47,7 +47,7 @@ if (isset($_GET['id_not'])) {
     var_dump($noticia);
 
     // Display the title, image, and content
-    echo '<h2>'.$noticia['titulo'].'</h2>';
+    echo '<h2 class="notit" >'.$noticia['titulo'].'</h2>';
     echo '<img src="img/'.$noticia['img'].'" alt="imagen de noticia">';
     echo '<p>'.$noticia['content'].'</p>';
     
