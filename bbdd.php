@@ -138,10 +138,9 @@
     
         $sentencia->fetch(); // Fetch the result
     
-        $sentencia->close(); // Close the statement
+        $sentencia->close();  //Close the statement//
         $mysqli->close();
         
-        // Concatenar nombre y apellido y devolver la cadena
         $nombreCompleto = $nombre . ' ' . $apellido;
         return $nombreCompleto;
     }
@@ -149,7 +148,7 @@
     function getNoticiaById($id) {
         $mysqli = connect_database();
         
-        $sql = "SELECT id_not, titulo, img, content FROM noticias WHERE id_not = ? LIMIT 1";
+        $sql = "SELECT id_not, titulo, img, content FROM noticias WHERE id_not = ? ";
         
         $sentencia = $mysqli->prepare($sql);
         $sentencia->bind_param("i", $id);
