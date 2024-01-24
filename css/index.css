@@ -282,3 +282,10 @@ td {
     left: -1cm;
   }
 }
+
+
+a {
+  text-decoration: underline;
+  color: #000000;
+  cursor: pointer;
+}
