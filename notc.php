@@ -44,9 +44,9 @@ include_once 'bbdd.php'; // Include your database connection file
  // Include the functions file
  var_dump(hola);
 
-
+if (isset($_GET['id_not'])) {
     var_dump($noticiaId);
-    $noticiaId = $_GET['id'];
+    $noticiaId = $_GET['id_not'];
     $noticia = getNoticiaById($noticiaId);
 
     // Display the title, image, and content
@@ -58,7 +58,9 @@ include_once 'bbdd.php'; // Include your database connection file
     echo '<div class="author-box">';
     echo '<h4> 🔔 Publicado por Abiral</h4>';
     echo '</div>';
-
+} else {
+    echo 'Invalid news ID.';
+}
 
 ?>
 
