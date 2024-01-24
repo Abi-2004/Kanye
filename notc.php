@@ -28,7 +28,7 @@ include_once 'bbdd.php'; // Include your database connection file
 
 if (isset($_GET['id_not'])) {
     var_dump($noticiaId);
-    $noticiaId = $_GET['id_not'];*/
+    $noticiaId = $_GET['id_not'];
 
     $noticia = getNoticiaById("id_not");
 
