@@ -144,7 +144,24 @@
         return $nombreCompleto;
     }
     
-
+    function getNoticiaById($id) {
+        $mysqli = connect_database();
+        
+        $sql = "SELECT id_not, titulo, img, contenido FROM noticias WHERE id_not = ? LIMIT 1";
+        
+        $sentencia = $mysqli->prepare($sql);
+        $sentencia->bind_param("i", $id);
+        $sentencia->execute();
+    
+        $sentencia->bind_result($id_not, $titulo, $img, $contenido);
+        $sentencia->fetch();
+    
+        $noticia = array('id_noticia' => $id_not, 'titulo' => $titulo, 'img' => $img, 'contenido' => $contenido);
+    
+        $mysqli->close();
+    
+        return $noticia;
+    }
 
 
 

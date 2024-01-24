@@ -15,7 +15,7 @@
 
 
   
-    
+
 
 
 <?php include_once "menu.php"; ?>
@@ -40,28 +40,25 @@
       </div>
 
 
-      <?php 
-
+<?php 
 include_once 'bbdd.php';
-
 $noticias = noticia();
-
 ?>
 
 <div class="newsblock">
+    <?php
+    include_once 'bbdd.php';
+    $noticias = noticia(); 
+    for ($i = 0; $i < 5; $i++) {
+        echo '<div class="nb">';
+        echo '<a href="notc.php?id='.$noticias[$i]['id_noticia'].'">'; // Pass the news ID as a parameter
+        echo '<img src="img/'.$noticias[$i]['img'].'" alt="imagen de noticia">';
+        echo '<h3>'.$noticias[$i]['titulo'].'</h3>';
+        echo '</a>';
+        echo '</div>';
+    }
+    ?>
 
-        <?php
-        include_once 'bbdd.php';
-
-        $noticias = noticia(); 
-        for ($i = 0; $i < 5; $i++) {
-           
-        echo '  <div class="nb">';
-            echo '  <img src="img/'.$noticias[$i]['img'].'" alt="imagen de noticia">';
-            echo ' <a href="notc.html"> <H3>'.$noticias[$i]['titulo'].'</H3></a>';
-            echo '</div>';
-        }
-        ?>
 
 
 

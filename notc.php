@@ -39,17 +39,27 @@
         </H2>
     </div>
 
-<div class="notimg" > <img src="/img/noti1.webp" alt=""> </div>
+    <?php
+include_once 'bbdd.php'; // Include your database connection file
+ // Include the functions file
 
-    <div class="notcont" >
-        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex possimus optio maiores iure magnam? Libero exercitationem quos eos consectetur recusandae numquam expl  Lorem ipsum dolor, sit amet consectetur adipisicing elit. In vel dolores impedit harum amet maiores voluptatum aliquam sint, inventore magni quod architecto illum quis facilis saepe temporibus suscipit, nulla sit. icabo sit cupiditate consequatur rerum, aperiam consequuntur adipisci distinctio. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime fuga quae voluptas alias pariatur mollitia in at ipsum nulla unde porro odit vero adipisci minima magni quo, aliquid facilis impedit!</p>
-    </div>
+if (isset($_GET['id'])) {
+    $noticiaId = $_GET['id'];
+    $noticia = getNoticiaById($noticiaId);
 
-    <div class="author-box">
-        <h4> 🔔 Publicado por Abiral</h4>
-    </div>
-
-</div>
+    // Display the title, image, and content
+    echo '<h2>'.$noticia['titulo'].'</h2>';
+    echo '<img src="img/'.$noticia['img'].'" alt="imagen de noticia">';
+    echo '<p>'.$noticia['contenido'].'</p>';
+    
+    // Author box
+    echo '<div class="author-box">';
+    echo '<h4> 🔔 Publicado por Abiral</h4>';
+    echo '</div>';
+} else {
+    echo 'Invalid news ID.';
+}
+?>
 
     <footer>
        
