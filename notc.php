@@ -33,11 +33,6 @@
 
 <div class="content">
 
-    <div class="notit" >
-        <H2>
-            Titulo de la noticia
-        </H2>
-    </div>
 
     <?php
 include_once 'bbdd.php'; // Include your database connection file
