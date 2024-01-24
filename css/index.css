@@ -285,7 +285,7 @@ td {
 
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: #000000;
   cursor: pointer;
 }
