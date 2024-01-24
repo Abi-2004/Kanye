@@ -8,41 +8,43 @@
         }
         return $mysqli;
     }
-    function noticia()
-    {
+    function noticia() {
         $mysqli = connect_database();
         
-        $sql = "SELECT id_not, titulo, img FROM noticias ORDER BY id_not DESC " ;
-        
+        $sql = "SELECT id_not, titulo, img FROM noticias ORDER BY id_not DESC";
+    
+        // Prepare the SQL statement
         $sentencia = $mysqli->prepare($sql);
         if (!$sentencia) {
-            echo "Fallo en la preparación de la sentencia: " . $mysqli->errno;
+            die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
         }
-        
+    
+        // Execute the statement
         $ejecucion = $sentencia->execute();
         if (!$ejecucion) {
-            echo "Fallo en la ejecucion: " . $mysqli->errno;
+            die("Fallo en la ejecución: " . $sentencia->error);
         }
-        
-        $noticias = array(); 
-        
-        $id_not = -1; 
-        $titulo = "";
-        $img = ""; 
-        
+    
+        // Bind the result variables
         $vincular = $sentencia->bind_result($id_not, $titulo, $img);
         if (!$vincular) {
-            echo "Fallo al vincular la sentencia: " . $mysqli->errno;
+            die("Fallo al vincular la sentencia: " . $sentencia->error);
         }
-        
+    
+        // Fetch the results into an array
+        $noticias = array();
         while ($sentencia->fetch()) {
-            $noticia = array('id_noticia' => $id_not, 'titulo' => $titulo, 'img' => $img);
-            $noticias[] = $noticia; 
+            $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img);
+            $noticias[] = $noticia;
         }
-        
+    
+        // Close the statement and database connection
+        $sentencia->close();
         $mysqli->close();
+    
         return $noticias;
     }
+    
     
     
     function checkDatabaseConnection()
