@@ -43,7 +43,7 @@ if (isset($_GET['id_not'])) {
     echo '</div>';
     
 } else {
-    echo 'Invalid news ID.';
+    header("location: index.php");
 }
 
 ?>
