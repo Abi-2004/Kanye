@@ -180,10 +180,6 @@
         
         return $noticia;
     }
-    
-    
-    
-
 
 
     ?>
