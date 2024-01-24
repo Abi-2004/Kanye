@@ -16,20 +16,7 @@
         <h1>Noticia</h1>
     </header>
 
-    <div class="barra">
-        <a href="index.html">Inicio</a>
-        <li class="dropdown-li">
-          <a href="gira.html">Gira</a>
-          <ul class="dropdown">
-            <a href="gira.html">Gira completa</a>
-            <a href="galeria.html">Galería</a>
-            <a href="entrada.html">Compra de entradas</a>
-          </ul>
-        </li>
-        <a href="bio.html">BioGrafia</a>
-        <a href="disco.html">Discografia</a>
-        <a href="fan.html">Fanclub</a>
-      </div>
+<?php include_once 'menu.php'; ?>
 
 <div class="content">
 
