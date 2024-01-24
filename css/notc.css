@@ -23,7 +23,7 @@
     width: 90%;
     height: auto;
     border: 5px solid #e6dfcc;
-    margin-bottom: 10px;
+    margin-bottom: 1000px;
 }
 
 .notcont {
@@ -42,16 +42,15 @@ footer {
     text-align: center;
 }
 
-/* Additional styles for better aesthetics */
 body {
     font-family: 'Arial', sans-serif;
 }
 
 .content {
     overflow: hidden;
-    height: auto; /* Update to auto to accommodate variable content height */
+    height: auto; 
     margin: 20px;
-    margin-bottom: 50px; /* Add margin for better spacing */
+    margin-bottom: 50px; 
 }
 
 .author-box {
