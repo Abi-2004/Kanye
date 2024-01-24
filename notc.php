@@ -37,14 +37,14 @@
     <?php
 include_once 'bbdd.php'; // Include your database connection file
  // Include the functions file
- var_dump("hola");
+
 /*
 if (isset($_GET['id_not'])) {
     var_dump($noticiaId);
     $noticiaId = $_GET['id_not'];*/
 
     $noticia = getNoticiaById("8");
-    var_dump($noticia);
+
 
     // Display the title, image, and content
     echo '<h2 class="notit" >'.$noticia['titulo'].'</h2>';
