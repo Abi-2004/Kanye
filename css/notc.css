@@ -32,6 +32,8 @@
     padding: 20px;
     margin: 10px 0;
     text-align: justify;
+    margin-left: 5%;
+
 }
 
 /* Update footer style */
@@ -51,7 +53,6 @@ body {
     height: auto; 
     margin: 20px;
     margin-bottom: 50px; 
-    margin-left: 5%;
 }
 
 .author-box {
