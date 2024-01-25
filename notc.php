@@ -21,32 +21,33 @@
 <div class="content">
 
 
-    <?php
+<?php
 include_once 'bbdd.php'; // Include your database connection file
- // Include the functions file
-
 
 if (isset($_GET['id_not'])) {
-    var_dump($noticiaId);
     $noticiaId = $_GET['id_not'];
 
-    $noticia = getNoticiaById("id_not");
-
+    $noticia = getNoticiaById($noticiaId);
 
     // Display the title, image, and content
     echo '<h2 class="notit" >'.$noticia['titulo'].'</h2>';
     echo '<img class="notimg" src="img/'.$noticia['img'].'" alt="imagen de noticia">';
     echo '<p class="notcont" >'.$noticia['content'].'</p>';
-    
+
     echo '<div class="author-box">';
-    echo '<h4> 🔔 Publicado por Abiral</h4>';
+    $id = $noticia['id_aut'];
+    include_once 'bbdd.php';
+    $nombre = datosById($id);
+
+    echo '<h4> 🔔 Publicado por <b>'.$nombre.'</b></h4>';
     echo '</div>';
-    
 } else {
+    // Handle the case when 'id_not' is not set.
+    // For example, redirect to the homepage or display an error message.
     header("location: index.php");
 }
-
 ?>
+
 
     <footer>
        

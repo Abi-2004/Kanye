@@ -46,7 +46,6 @@
     }
 
 
-
     
     
     
@@ -148,11 +147,50 @@
         $nombreCompleto = $nombre . ' ' . $apellido;
         return $nombreCompleto;
     }
+
+
+    function datosById($id_aut)
+{
+    $mysqli = connect_database();
+
+    $sql = "SELECT nombre, apellido FROM autor WHERE id_aut = ?";
+
+    $sentencia = $mysqli->prepare($sql);
+    if (!$sentencia) {
+        echo "Fallo en la preparación de la sentencia" . $mysqli->errno;
+    }
+
+    $asignar = $sentencia->bind_param("i", $id_aut);
+    if (!$asignar) {
+        echo "Fallo en la asignación " . $mysqli->errno;
+    }
+
+    $ejecucion = $sentencia->execute();
+    if (!$ejecucion) {
+        echo "Fallo en la ejecución " . $mysqli->errno;
+    }
+
+    $nombre = "";
+    $apellido = "";
+    $vincular = $sentencia->bind_result($nombre, $apellido);
+    if (!$vincular) {
+        echo "Fallo al asociar parámetros " . $mysqli->errno;
+    }
+
+    $sentencia->fetch(); // Fetch the result
+
+    $sentencia->close();
+    $mysqli->close();
+
+    $nombreCompleto = $nombre . ' ' . $apellido;
+    return $nombreCompleto;
+}
+
     
     function getNoticiaById($id) {
         $mysqli = connect_database();
         
-        $sql = "SELECT id_not, titulo, img, content FROM noticias WHERE id_not = ?";
+        $sql = "SELECT id_not, titulo, img, content, id_aut FROM noticias WHERE id_not = ?";
         
         $sentencia = $mysqli->prepare($sql);
         if (!$sentencia) {
@@ -166,20 +204,21 @@
             die("Fallo en la ejecución: " . $sentencia->error);
         }
         
-        $vincular = $sentencia->bind_result($id_not, $titulo, $img, $content);
+        $vincular = $sentencia->bind_result($id_not, $titulo, $img, $content, $id_aut);
         if (!$vincular) {
             die("Fallo al vincular la sentencia: " . $sentencia->error);
         }
         
         $sentencia->fetch();
         
-        $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img, 'content' => $content);
+        $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img, 'content' => $content, 'id_aut' => $id_aut);
         
         $sentencia->close();
         $mysqli->close();
         
         return $noticia;
     }
+    
 
 
     ?>
