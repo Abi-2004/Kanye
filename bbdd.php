@@ -47,6 +47,52 @@
 
 
     
+    function obtenerId($user) {
+        $mysqli = connect_database();
+    
+        // Escapar caracteres para prevenir SQL injection
+        $user = mysqli_real_escape_string($mysqli, $user);
+    
+        // Crear la consulta SQL con una sentencia preparada
+        $sql = "SELECT id_aut FROM autor WHERE usuario = ?";
+    
+        // Preparar la sentencia
+        $stmt = $mysqli->prepare($sql);
+    
+        // Verificar si la preparación fue exitosa
+        if ($stmt === FALSE) {
+            die("Error al preparar la consulta: " . $mysqli->error);
+        }
+    
+        // Vincular el parámetro
+        $stmt->bind_param("s", $user);
+    
+        // Ejecutar la consulta
+        $stmt->execute();
+    
+        // Obtener el resultado
+        $result = $stmt->get_result();
+    
+        // Verificar si se encontraron resultados
+        if ($result->num_rows > 0) {
+            // Obtener el resultado como un array asociativo
+            $row = $result->fetch_assoc();
+            // Cerrar la sentencia preparada
+            $stmt->close();
+            // Cerrar la conexión
+            $mysqli->close();
+            // Devolver el valor de id_aut
+            return $row['id_aut'];
+        } else {
+            // Cerrar la sentencia preparada
+            $stmt->close();
+            // Cerrar la conexión
+            $mysqli->close();
+            // En caso de no encontrar resultados, puedes devolver false o cualquier otro indicador
+            return false;
+        }
+    }
+    
     
     
     
@@ -184,6 +230,32 @@
 
     $nombreCompleto = $nombre . ' ' . $apellido;
     return $nombreCompleto;
+}
+
+
+function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
+{
+    $mysqli = connect_database();
+
+    // Preparar la consulta SQL para insertar la noticia
+    $sql = "INSERT INTO noticias (titulo, content, img, id_aut) VALUES (?, ?, ?, ?)";
+
+    $sentencia = $mysqli->prepare($sql);
+    if (!$sentencia) {
+        die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
+    }
+
+    // Vincular los parámetros y ejecutar la consulta
+    $sentencia->bind_param("ssss", $titulo, $contenido, $imagen, $idUsuario);
+
+    $ejecucion = $sentencia->execute();
+    if (!$ejecucion) {
+        die("Fallo en la ejecución: " . $mysqli->errno);
+    }
+
+    // Cerrar la sentencia y la conexión
+    $sentencia->close();
+    $mysqli->close();
 }
 
     
