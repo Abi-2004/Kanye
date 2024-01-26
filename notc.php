@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/comun.css">
     <link rel="stylesheet" href="css/notc.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5960283468400996"
+     crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
