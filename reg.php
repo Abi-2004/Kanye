@@ -43,10 +43,11 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
-            <!-- Add the reCAPTCHA widget -->
-            <div class="g-recaptcha" data-sitekey="6Lf8X1wpAAAAAPP0WUdum8IHHQ_J2CoRhO2HDpLd" data-callback="onSubmit" data-action="submit"></div>
-            <!-- Button to submit the form -->
+
+            <div class="g-recaptcha" data-sitekey="6Lf8X1wpAAAAAPP0WUdum8IHHQ_J2CoRhO2HDpLd"></div>
+
             <button type="button" onclick="onClick(event)" class="btn-register">Registrar</button>
+
         </form>
     </div>
 
@@ -54,21 +55,15 @@
         <h4>COPYRIGHT © Abiral Dahal</h4>
         <h5>2024</h5>
     </footer>
+<script>
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6Lf8X1wpAAAAAPP0WUdum8IHHQ_J2CoRhO2HDpLd', {action: 'submit'});
+      document.getElementById("registration-form").submit();
+    });
+  }
+</script>
 
-    <!-- Your script to handle CAPTCHA -->
-    <script>
-        async function onClick(e) {
-            e.preventDefault();
-            grecaptcha.enterprise.ready(async () => {
-                const token = await grecaptcha.enterprise.execute('6Lf8X1wpAAAAAPP0WUdum8IHHQ_J2CoRhO2HDpLd', {action: 'register'});
-                // Add the CAPTCHA token to the form
-                document.getElementById("registration-form").submit();
-            });
-        }
-        function onSubmit(token) {
-            // This function is called when reCAPTCHA is successfully completed
-            // You can handle further actions here if needed
-        }
-    </script>
 </body>
 </html>
