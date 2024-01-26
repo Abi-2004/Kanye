@@ -25,17 +25,17 @@ if (isset($_POST["submit"])) {
 
     // Verificar si se seleccionó una imagen
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] == 0) {
-        $directorioImagenes = "";
+        $directorioImagenes = "img/";
 
         $nombreImagen = $_FILES["foto"]["name"];
-        $rutaImagen = $directorioImagenes . $nombreImagen;
+        $rutaImagen = $directorioImagenes . $nombreImagen. date("Ymd_His") . "_" . explode(".",microtime(true))[1];
 
         move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen);
     } else {
-        $rutaImagen = "img/"; 
+        $rutaImagen = ""; 
     }
 
-    $rutaimg = $id."-".$rutaImagen;
+    
  
     var_dump("($titulo, $contenido, $rutaImagen, $id)");
     insertarNoticia($titulo, $contenido, $rutaimg, $id);
