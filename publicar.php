@@ -35,9 +35,10 @@ if (isset($_POST["submit"])) {
         $rutaImagen = "img/"; 
     }
 
+    $rutaimg = $id."-".$rutaImagen;
  
     var_dump("($titulo, $contenido, $rutaImagen, $id)");
-    insertarNoticia($titulo, $contenido, $rutaImagen, $id);
+    insertarNoticia($titulo, $contenido, $rutaimg, $id);
 
     // Redireccionar a la página principal u otra página de éxito
     header("location: index.php");
