@@ -42,7 +42,7 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <!-- Add the reCAPTCHA widget -->
-            <div class="g-recaptcha" data-sitekey="6LdYQ10pAAAAAAAqGyoQJkyb7NWvwcG5z4OwZEvZ" data-callback="onSubmit" data-action="submit"></div>
+            <div class="g-recaptcha" data-sitekey="6Lf8X1wpAAAAAPP0WUdum8IHHQ_J2CoRhO2HDpLd" data-callback="onSubmit" data-action="submit"></div>
             <!-- Button to submit the form -->
             <button type="button" onclick="onClick(event)" class="btn-register">Registrar</button>
         </form>
@@ -58,7 +58,7 @@
         async function onClick(e) {
             e.preventDefault();
             grecaptcha.enterprise.ready(async () => {
-                const token = await grecaptcha.enterprise.execute('6LdYQ10pAAAAAAAqGyoQJkyb7NWvwcG5z4OwZEvZ', {action: 'register'});
+                const token = await grecaptcha.enterprise.execute('6Lf8X1wpAAAAAPP0WUdum8IHHQ_J2CoRhO2HDpLd', {action: 'register'});
                 // Add the CAPTCHA token to the form
                 document.getElementById("registration-form").submit();
             });
