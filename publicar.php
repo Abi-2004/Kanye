@@ -26,7 +26,7 @@ if (isset($_POST["submit"])) {
     // Verificar si se seleccionó una imagen
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] == 0) {
         // Directorio donde se guardarán las imágenes
-        $directorioImagenes = "/img";
+        $directorioImagenes = "img/";
 
         // Obtener información de la imagen
         $nombreImagen = $_FILES["foto"]["name"];
