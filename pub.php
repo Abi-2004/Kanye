@@ -42,8 +42,8 @@ if(isset($user) != true)
 
     <div class="container">
         <h2>Publicar Noticia</h2>
-        <form>
-            <div class="form-group">
+        <form action="publicar.php" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
                 <label for="titulo">Título:</label>
                 <input type="text" id="titulo" name="titulo" required>
             </div>
@@ -57,8 +57,8 @@ if(isset($user) != true)
                 <label class="btn-upload" for="foto">Seleccionar Foto</label>
                 <span class="selected-file" id="selectedFile"></span>
             </div>
-            <button type="submit" class="btn-upload">Publicar Noticia</button>
-        </form>
+            <button type="submit" class="btn-upload" name="submit">Publicar Noticia</button>
+                </form>
     </div>
 
     <footer>
