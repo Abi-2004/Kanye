@@ -35,10 +35,7 @@ if (isset($_POST["submit"])) {
         $rutaImagen = "img/"; 
     }
 
-  
-    $rutaimg =  date("Ymd_His") . "_" . explode(".",microtime(true))[1]." ".$rutaImagen; 
-   
-    
+    $rutaimg = $id."-".$rutaImagen;
  
     var_dump("($titulo, $contenido, $rutaImagen, $id)");
     insertarNoticia($titulo, $contenido, $rutaimg, $id);
