@@ -25,22 +25,17 @@ if (isset($_POST["submit"])) {
 
     // Verificar si se seleccionó una imagen
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] == 0) {
-        // Directorio donde se guardarán las imágenes
-        $directorioImagenes = "img/";
+        $directorioImagenes = "";
 
-        // Obtener información de la imagen
         $nombreImagen = $_FILES["foto"]["name"];
         $rutaImagen = $directorioImagenes . $nombreImagen;
 
-        // Mover la imagen al directorio de imágenes
         move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen);
     } else {
-        // Manejar el caso en el que no se haya seleccionado una imagen
-        $rutaImagen = ""; // Puedes establecer un valor predeterminado o manejarlo según tus necesidades
+        $rutaImagen = "img/"; 
     }
 
-    // Insertar datos en la base de datos
-    // (Asegúrate de tener una función similar a 'insertarNoticia' en tu archivo bbdd.php)
+ 
     var_dump("($titulo, $contenido, $rutaImagen, $id)");
     insertarNoticia($titulo, $contenido, $rutaImagen, $id);
 
