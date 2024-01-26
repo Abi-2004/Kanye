@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="css/fan.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Include the reCAPTCHA Enterprise API script -->
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdYQ10pAAAAAAAqGyoQJkyb7NWvwcG5z4OwZEvZ"></script>
-</head>
+
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf8X1wpAAAAAPP0WUdum8IHHQ_J2CoRhO2HDpLd"></script>
+    
+  </head>
 <body>
     
     <header>
