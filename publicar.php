@@ -29,7 +29,7 @@ if (isset($_POST["submit"])) {
 
         // Obtener información de la imagen
         $nombreImagen = $_FILES["foto"]["name"];
-        $rutaImagen = $directorioImagenes . $nombreImagen;
+        $rutaImagen = $directorioImagenes . $nombreImagen.date("Ymd_His") . "_" . explode(".",microtime(true))[1];
 
         // Mover la imagen al directorio de imágenes
         move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen);
