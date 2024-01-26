@@ -52,7 +52,7 @@ $noticias = noticia();
     for ($i = 0; $i < 5; $i++) {
         echo '<div class="nb">';
         echo '<a href="notc.php?id_not='.$noticias[$i]['id_not'].'">'; 
-        echo '<img src="img/'.$noticias[$i]['img'].'" alt="imagen de noticia">';
+        echo '<img src="'.$noticias[$i]['img'].'" alt="imagen de noticia">';
         echo '<h3>'.$noticias[$i]['titulo'].'</h3>';
         echo '</a>';
         echo '</div>';
