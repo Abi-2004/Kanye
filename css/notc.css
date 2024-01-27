@@ -58,14 +58,14 @@ body {
 }
 
 .author-box {
-    width: 25%;
-    height: 2.5%;
-    background-color:#e6dfcc;
+    width: 22%;
+    height: 46px;
+    background-color: #e6dfcc;
     color: #333332;
-    padding: 10px;
-    border-radius: 10px;
-   margin-top: 10px;
-   margin-bottom: 10px;
+    padding: 17px;
+    border-radius: 50px;
+    margin-top: 539px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
