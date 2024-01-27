@@ -21,7 +21,7 @@
 .notimg img {
     display: block;
     width: 90%;
-    height: auto;
+    height: 500px;
     border: 5px solid #e6dfcc;
     margin-bottom: 100px;
 }
@@ -58,7 +58,7 @@ body {
 .author-box {
     position: relative;
     width: 25%;
-    height: 100px;
+    height: 5%;
     background-color:#e6dfcc;
     color: #333332;
     padding: 10px;
