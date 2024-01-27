@@ -58,7 +58,7 @@ body {
 
 .author-box {
     width: 25%;
-    height: 5%;
+    height: 100px;
     background-color:#e6dfcc;
     color: #333332;
     padding: 10px;
