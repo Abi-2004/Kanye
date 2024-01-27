@@ -13,7 +13,7 @@
 .notcont {
     float: left;
     width: 40%;
-    height: 400px;
+    height: 500px;
     border: solid hidden;
     border-radius: 20px;
 }
@@ -57,14 +57,12 @@ body {
 }
 
 .author-box {
-    position: relative;
     width: 25%;
     height: 5%;
     background-color:#e6dfcc;
     color: #333332;
     padding: 10px;
     border-radius: 10px;
-    margin-top: 500px;
     margin-bottom: 100px;
     text-align: center;
 }
