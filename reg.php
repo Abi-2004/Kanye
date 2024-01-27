@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/fan.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
    
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   </head>
 <body>
     
@@ -41,7 +42,7 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
-
+            <div class="g-recaptcha" data-sitekey="6Lenhl4pAAAAAIFx3kZrj-q31mxLEpmuLLcvY_HH"></div>
             <button type="submit" class="btn-register">Registrar</button>
 
         </form>
