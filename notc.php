@@ -47,8 +47,7 @@ if (isset($_GET['id_not'])) {
     echo '<h4> 🔔 Publicado por <b>'.$nombre.'</b></h4>';
     echo '</div>';
 } else {
-    // Handle the case when 'id_not' is not set.
-    // For example, redirect to the homepage or display an error message.
+
     header("location: index.php");
 }
 ?>
