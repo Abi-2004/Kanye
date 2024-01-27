@@ -24,6 +24,7 @@ echo '<div class="barra">
           
           }
           
+          
          
          echo' <a href="reg.php">Registrar</a>';
 
