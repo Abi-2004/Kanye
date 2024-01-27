@@ -37,13 +37,13 @@
 
 }
 
-/* Update footer style */
 footer {
     color: #e6dfcc;
     padding: 20px;
-    clear: both; /* Clear float to prevent footer issues */
     text-align: center;
-    margin-top: 50%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 body {
