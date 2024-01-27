@@ -42,7 +42,7 @@
                 <input type="email" id="email" name="email" required>
             </div>
 
-            <button type="button"  class="btn-register">Registrar</button>
+            <button type="submit" class="btn-register">Registrar</button>
 
         </form>
     </div>
