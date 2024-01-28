@@ -151,6 +151,14 @@
   flex-direction: column;
 }
 
+.nb {
+  height: max-content;
+  width: 25%;
+}
+
+.nb img {
+  width: fit-content;
+}
 
 
 }
