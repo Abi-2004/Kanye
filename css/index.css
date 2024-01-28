@@ -141,6 +141,11 @@
   flex-direction: column;
 }
 
+.nb {
+  height: max-content;
+  width: max-content;
+}
+
 
 }
 
