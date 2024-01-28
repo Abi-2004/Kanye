@@ -104,6 +104,10 @@
     width: 25%;
   }
   
+  .nb img {
+    width: auto;
+  }
+
 }
 
 .nb:hover {
