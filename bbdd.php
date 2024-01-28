@@ -259,37 +259,39 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
 }
 
     
-    function getNoticiaById($id) {
-        $mysqli = connect_database();
-        
-        $sql = "SELECT id_not, titulo, img, content, id_aut FROM noticias WHERE id_not = ?";
-        
-        $sentencia = $mysqli->prepare($sql);
-        if (!$sentencia) {
-            die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
-        }
-        
-        $sentencia->bind_param("i", $id);
-        
-        $ejecucion = $sentencia->execute();
-        if (!$ejecucion) {
-            die("Fallo en la ejecución: " . $sentencia->error);
-        }
-        
-        $vincular = $sentencia->bind_result($id_not, $titulo, $img, $content, $id_aut);
-        if (!$vincular) {
-            die("Fallo al vincular la sentencia: " . $sentencia->error);
-        }
-        
-        $sentencia->fetch();
-        
-        $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img, 'content' => $content, 'id_aut' => $id_aut);
-        
-        $sentencia->close();
-        $mysqli->close();
-        
-        return $noticia;
+
+function getNoticiaById($id) {
+    $mysqli = connect_database();
+    
+    $sql = "SELECT id_not, titulo, img, content, id_aut, fecha FROM noticias WHERE id_not = ?";
+    
+    $sentencia = $mysqli->prepare($sql);
+    if (!$sentencia) {
+        die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
     }
+    
+    $sentencia->bind_param("i", $id);
+    
+    $ejecucion = $sentencia->execute();
+    if (!$ejecucion) {
+        die("Fallo en la ejecución: " . $sentencia->error);
+    }
+    
+    $vincular = $sentencia->bind_result($id_not, $titulo, $img, $content, $id_aut, $fecha);
+    if (!$vincular) {
+        die("Fallo al vincular la sentencia: " . $sentencia->error);
+    }
+    
+    $sentencia->fetch();
+    
+    $noticia = array('id_not' => $id_not, 'titulo' => $titulo, 'img' => $img, 'content' => $content, 'id_aut' => $id_aut, 'fecha' => $fecha);
+    
+    $sentencia->close();
+    $mysqli->close();
+    
+    return $noticia;
+}
+
     
 
 
