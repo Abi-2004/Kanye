@@ -64,33 +64,6 @@ $noticias = noticia();
     }
     ?>
 
-
-
-
-<!--
-    <div class="nb" >
-      <img src="img/noti1.webp" alt="">
-      <H3>La transformación de Bianca Censori: el antes y el después de su relación con Kanye West</H3>
-    </div>
-    <div class="nb" >
-      <img src="img/noti2.jpg" alt="">
-      <h3>Ni una ni dos, sino tres ex de Kanye West coinciden en una gala de premios</h3>
-    </div>
-    <div class="nb" >
-      <img src="img/noti3.webp" alt="">
-      <h3>Kanye West pagará a Kim Kardashian más de 190.000 euros al mes de pensión tras llegar a un acuerdo de divorcio</h3>
-    </div>
-    <div class="nb" >
-      <img src="img/noti3.webp" alt="">
-      <h3>Kanye West pagará a Kim Kardashian más de 190.000 euros al mes de pensión tras llegar a un acuerdo de divorcio</h3>
-    </div>
-    <div class="nb" >
-      <img src="img/noti3.webp" alt="">
-      <h3>Kanye West pagará a Kim Kardashian más de 190.000 euros al mes de pensión tras llegar a un acuerdo de divorcio</h3>
-    </div>
--->
-
-
 </div>
 
 
