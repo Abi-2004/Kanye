@@ -91,11 +91,15 @@
   .newsblock {
     height: auto;
     flex-direction: column;
+  
+    display: flex ;
+    justify-content: center;
+    align-items: center;
   }
 
   .nb {
     height: max-content;
-    width: max-content;
+    width: 40%;
   }
   
 }
