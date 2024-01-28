@@ -88,7 +88,7 @@
   transition: 1s;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: initial;
 }
 
 @media only screen and (max-width: 1080px) {
