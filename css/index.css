@@ -112,6 +112,7 @@
 }
 
 .nb img {
+  margin-top: 0.2%;
   display: block; /* Make the image a block element */
   margin: auto;   /* Center the image horizontally */
   height: 170px;
