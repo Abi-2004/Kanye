@@ -10,6 +10,11 @@
    
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+
+<!-- Include SweetAlert JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   </head>
 <body>
     
@@ -54,7 +59,7 @@ function validateRecaptcha() {
     var response = grecaptcha.getResponse();
 
     if (response.length === 0) {
-        // Use SweetAlert for a more visually appealing alert
+        
         Swal.fire({
             icon: 'warning',
             title: 'Verificación reCAPTCHA',
@@ -64,11 +69,11 @@ function validateRecaptcha() {
     }
 
     // If the reCAPTCHA is verified, you can optionally do further validation here
-    // For example, you might want to check other form fields or conditions
 
     return true; // Allow form submission
 }
 </script>
+
 
 
     <footer>
