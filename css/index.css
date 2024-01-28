@@ -76,8 +76,8 @@
   position: relative;
   margin-top: 25px;
   margin-bottom: 25px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   height: auto;
   width: calc(33.33% ); /* Adjust the width based on the number of items per row */
   background-color: #e6dfcc;
