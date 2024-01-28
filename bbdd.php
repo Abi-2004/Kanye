@@ -238,7 +238,7 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
     $mysqli = connect_database();
 
     // Get the current date
-    $currentDate = date("Y-m-d");
+    $currentDate = date("YYYY-mm-dd");
 
     // Preparar la consulta SQL para insertar la noticia
     $sql = "INSERT INTO noticias (titulo, content, img, id_aut, fecha) VALUES (?, ?, ?, ?, ?)";
