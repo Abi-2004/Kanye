@@ -112,12 +112,13 @@
 }
 
 .nb img {
-  margin-top: 0.3cm;
   display: block; /* Make the image a block element */
   margin: auto;   /* Center the image horizontally */
   height: 170px;
   width: 330px;
   border-radius: 10px;
+  top: 25px;
+  bottom: 25px;
 }
 
 .nb h3 {
