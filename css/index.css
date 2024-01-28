@@ -76,15 +76,17 @@
   position: relative;
   margin-top: 25px;
   margin-bottom: 25px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
   height: auto;
-  width: calc(33.33% - 10px); /* Adjust the width based on the number of items per row */
+  width: calc(33.33% ); /* Adjust the width based on the number of items per row */
   background-color: #e6dfcc;
   color: #412517;
   display: inline-block;
   border-radius: 10px;
   transition: 1s;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1080px) {
