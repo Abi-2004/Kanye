@@ -112,13 +112,11 @@
 }
 
 .nb img {
-  display: block; /* Make the image a block element */
-  margin: auto;   /* Center the image horizontally */
+  display: inline-block; /* Ensure image is treated as inline content */
+  vertical-align: middle; /* Vertically align the inline content */
   height: 170px;
   width: 330px;
   border-radius: 10px;
-  top: 25px;
-  bottom: 25px;
 }
 
 .nb h3 {
