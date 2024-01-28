@@ -87,16 +87,17 @@
   transition: 1s;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1080px) {
   .newsblock {
     height: auto;
     flex-direction: column;
   }
 
   .nb {
-    width: auto; /* Adjust the width based on your preference */
-    margin: 10px auto;
+    height: max-content;
+    width: max-content;
   }
+  
 }
 
 .nb:hover {
@@ -141,10 +142,6 @@
   flex-direction: column;
 }
 
-.nb {
-  height: max-content;
-  width: max-content;
-}
 
 
 }
