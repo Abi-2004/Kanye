@@ -112,8 +112,9 @@
 }
 
 .nb img {
-  display: block;
-  margin-bottom: 10px; /* Add some bottom margin for spacing */
+  margin-top: 0.3cm;
+  display: block; /* Make the image a block element */
+  margin: auto;   /* Center the image horizontally */
   height: 170px;
   width: 330px;
   border-radius: 10px;
