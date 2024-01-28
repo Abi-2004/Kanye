@@ -117,8 +117,7 @@
     height: 170px;
     width: 330px;
     border-radius: 10px;
-    right: 50%;
-    left: 50%;
+    margin: auto;
 }
 
 .nb h3 {
