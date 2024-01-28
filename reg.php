@@ -43,7 +43,7 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="g-recaptcha" data-sitekey="6Lenhl4pAAAAAIFx3kZrj-q31mxLEpmuLLcvY_HH"></div>
-            
+             
             <button type="submit" class="btn-register">Registrar</button>
 
         </form>
