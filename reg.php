@@ -21,7 +21,7 @@
 
     <div class="container">
         <h2>Registro de Usuario</h2>
-        <form id="registration-form" action="registrar.php" method="post">
+        <form id="registration-form" action="registrar.php" method="post" onsubmit="return validateRecaptcha()">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -43,10 +43,27 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="g-recaptcha" data-sitekey="6Lenhl4pAAAAAIFx3kZrj-q31mxLEpmuLLcvY_HH"></div>
+            
             <button type="submit" class="btn-register">Registrar</button>
 
         </form>
     </div>
+
+    <script>
+function validateRecaptcha() {
+    var response = grecaptcha.getResponse();
+
+    if (response.length === 0) {
+        alert("Please complete the reCAPTCHA verification.");
+        return false; // Prevent form submission
+    }
+
+    // If the reCAPTCHA is verified, you can optionally do further validation here
+
+    return true; // Allow form submission
+}
+</script>
+
 
     <footer>
         <h4>COPYRIGHT © Abiral Dahal</h4>
