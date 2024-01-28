@@ -54,11 +54,17 @@ function validateRecaptcha() {
     var response = grecaptcha.getResponse();
 
     if (response.length === 0) {
-        alert("Please complete the reCAPTCHA verification.");
+        // Use SweetAlert for a more visually appealing alert
+        Swal.fire({
+            icon: 'warning',
+            title: 'Verificación reCAPTCHA',
+            text: 'Por favor, completa la verificación reCAPTCHA para demostrar que eres humano.',
+        });
         return false; // Prevent form submission
     }
 
     // If the reCAPTCHA is verified, you can optionally do further validation here
+    // For example, you might want to check other form fields or conditions
 
     return true; // Allow form submission
 }
