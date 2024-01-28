@@ -101,7 +101,7 @@
 
   .nb {
     height: max-content;
-    width: 30%;
+    width: auto;
   }
   
   .nb img {
