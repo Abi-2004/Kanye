@@ -76,17 +76,15 @@
   position: relative;
   margin-top: 25px;
   margin-bottom: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
   height: auto;
-  width: calc(30% ); /* Adjust the width based on the number of items per row */
+  width: 100%;
   background-color: #e6dfcc;
   color: #412517;
-  display: inline-block;
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  align-items: center;    /* Center items horizontally */
   border-radius: 10px;
   transition: 1s;
-  justify-content: center;
-  align-items: center;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -112,9 +110,8 @@
 }
 
 .nb img {
-  margin-top: 0.3cm;
-  display: block; /* Make the image a block element */
-  margin: auto;   /* Center the image horizontally */
+  display: block;
+  margin-bottom: 10px; /* Add some bottom margin for spacing */
   height: 170px;
   width: 330px;
   border-radius: 10px;
