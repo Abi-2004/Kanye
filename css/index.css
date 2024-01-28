@@ -63,12 +63,13 @@
 /*comienzo de noticia_______________________________*/
 .newsblock {
   height: auto;
-  width: 100%;
+  width: 110%;
   background-color: #7acec2;
   margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   transition: 3s;
 }
 
