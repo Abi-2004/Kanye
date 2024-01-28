@@ -45,7 +45,7 @@ if (isset($_GET['id_not'])) {
     $nombre = datosById($id);
 
     echo '<h4> 🔔 Publicado por <b>'.$nombre.'</b></h4>';
-    echo '<br> <h4> Fecha: 2024/3/3</h4>';
+    echo ' <h4> Fecha: 2024/3/3</h4>';
     echo '</div>';
 } else {
 
