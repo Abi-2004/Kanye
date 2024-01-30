@@ -237,16 +237,14 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
 {
     $mysqli = connect_database();
 
-
-
-    $sql = "INSERT INTO noticias (titulo, content, img, id_aut) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO noticias (titulo, content, img, id_aut, fecha) VALUES (?, ?, ?, ?, NOW())";
 
     $sentencia = $mysqli->prepare($sql);
     if (!$sentencia) {
         die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
     }
 
-    // Vincular los parámetros y ejecutar la consulta
+    // Bind parameters and execute the query
     $sentencia->bind_param("ssss", $titulo, $contenido, $imagen, $idUsuario);
 
     $ejecucion = $sentencia->execute();
@@ -254,10 +252,11 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
         die("Fallo en la ejecución: " . $mysqli->errno);
     }
 
-    // Cerrar la sentencia y la conexión
+    // Close the statement and the connection
     $sentencia->close();
     $mysqli->close();
 }
+
 
     
 
