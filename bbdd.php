@@ -237,8 +237,10 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
 {
     $mysqli = connect_database();
 
-    // Preparar la consulta SQL para insertar la noticia
-    $sql = "INSERT INTO noticias (titulo, content, img, id_aut) VALUES (?, ?, ?, ?)";
+    $fecha = date("Y-m-d");
+
+
+    $sql = "INSERT INTO noticias (titulo, content, img, id_aut,fecha) VALUES (?, ?, ?, ?, ?)";
 
     $sentencia = $mysqli->prepare($sql);
     if (!$sentencia) {
@@ -246,7 +248,7 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
     }
 
     // Vincular los parámetros y ejecutar la consulta
-    $sentencia->bind_param("ssss", $titulo, $contenido, $imagen, $idUsuario);
+    $sentencia->bind_param("ssssi", $titulo, $contenido, $imagen, $idUsuario, $fecha);
 
     $ejecucion = $sentencia->execute();
     if (!$ejecucion) {
