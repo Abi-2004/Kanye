@@ -240,7 +240,7 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
    
 
 
-    $sql = "INSERT INTO noticias (titulo, content, img, id_aut) VALUES (?, ?, ?, ?,)";
+    $sql = "INSERT INTO noticias (titulo, content, img, id_aut) VALUES (?, ?, ?, ?)";
 
     $sentencia = $mysqli->prepare($sql);
     if (!$sentencia) {
