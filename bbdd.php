@@ -237,7 +237,6 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
 {
     $mysqli = connect_database();
 
-   
 
 
     $sql = "INSERT INTO noticias (titulo, content, img, id_aut) VALUES (?, ?, ?, ?)";
