@@ -17,7 +17,9 @@ $id = obtenerId($user) ;
 var_dump($id);
 
 var_dump("Insertado");
-// Procesar el formulario si se envió
+
+
+
 if (isset($_POST["submit"])) {
     // Recuperar valores del formulario
     $titulo = $_POST["titulo"];
@@ -34,6 +36,9 @@ if (isset($_POST["submit"])) {
         // Mover la imagen al directorio de imágenes
         move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen);
     } else {
+
+
+
         // Manejar el caso en el que no se haya seleccionado una imagen
         $rutaImagen = ""; // Puedes establecer un valor predeterminado o manejarlo según tus necesidades
     }
