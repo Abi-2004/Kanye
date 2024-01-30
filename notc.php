@@ -27,7 +27,7 @@
 
 
 <?php
-include_once 'bbdd.php'; // Include your database connection file
+include_once 'bbdd.php';
 
 if (isset($_GET['id_not'])) {
     $noticiaId = $_GET['id_not'];
@@ -52,6 +52,7 @@ if (isset($_GET['id_not'])) {
 
     header("location: index.php");
 }
+
 ?>
 
 
