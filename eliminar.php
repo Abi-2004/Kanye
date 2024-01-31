@@ -9,7 +9,7 @@
 
         // Llamar a la función para eliminar la noticia
         if(eliminarNoticia($idNoticia)) {
-            header("Location: index.php");
+            header("Location: mis.php");
             exit();
         } else {
             // Si la eliminación falló, mostrar un mensaje de error
