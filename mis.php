@@ -36,6 +36,7 @@
                 // Obtener el ID del usuario
                 $id = obtenerId($user);
                 include_once "bbdd.php";
+                var_dump($id);
                 $noticiasUsuario = getNoticiasByUsuario($id);
 
                 // Iterar sobre las noticias y mostrarlas en la tabla
