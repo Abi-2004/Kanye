@@ -1,6 +1,6 @@
 <?php
     // Verificar si se recibió un ID válido
-    if(isset($_GET['id']) && !empty($_GET['id'])) {
+    if(isset($_GET['id_not']) && !empty($_GET['id_not'])) {
         // Incluir el archivo con las funciones de base de datos
         include_once "funciones.php";
 
