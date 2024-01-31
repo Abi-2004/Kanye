@@ -40,7 +40,7 @@
 
                 foreach ($noticiasUsuario as $noticia) {
                     echo "<tr>";
-                    echo "<td>" . $noticia['foto'] . "</td>";
+                    echo "<td class='img'>" . $noticia['img'] . "</td>";
                     echo "<td>" . $noticia['titulo'] . "</td>";
                     echo "<td>" . $noticia['contenido'] . "</td>";
                     echo "<td><a href='modificar.php?id_not=" . $noticia['id_not'] . "'>Modificar</a></td>";
