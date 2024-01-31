@@ -39,7 +39,6 @@
                 var_dump($id);
                 $noticiasUsuario = getNoticiasByUsuario($id);
 
-                // Iterar sobre las noticias y mostrarlas en la tabla
                 foreach ($noticiasUsuario as $noticia) {
                     echo "<tr>";
                     echo "<td>" . $noticia['foto'] . "</td>";
@@ -50,9 +49,9 @@
                     echo "</tr>";
                 }
             } else {
-                // Si el usuario no está autenticado, redirigir a la página de inicio de sesión
+               
                 header("Location: log.php");
-                exit(); // Detener la ejecución del script
+                exit(); 
             }
         ?>
     </table>
