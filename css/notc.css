@@ -94,9 +94,9 @@ h4, h5 {
 
 .view {
    
-    left: 0;
-    right: 0;
-    top: 0;
+  
+    margin-left: 1cm;
+    margin-top: 2cm;
     display: flex;
     align-items: center;
     
