@@ -35,7 +35,7 @@
                 $user = $_SESSION["user"];
                 // Obtener el ID del usuario
                 $id = obtenerId($user);
-                // Obtener las noticias del usuario actual
+                include_once "bbdd.php";
                 $noticiasUsuario = getNoticiasByUsuario($id);
 
                 // Iterar sobre las noticias y mostrarlas en la tabla
