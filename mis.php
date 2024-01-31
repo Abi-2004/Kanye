@@ -31,7 +31,7 @@
 
             // Verificar si el usuario está autenticado
             if(isset($_SESSION["user"])) {
-                // Obtener el usuario de la sesión
+                include_once "bbdd.php";
                 $user = $_SESSION["user"];
                 // Obtener el ID del usuario
                 $id = obtenerId($user);
