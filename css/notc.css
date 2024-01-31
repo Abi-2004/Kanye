@@ -93,5 +93,5 @@ h4, h5 {
 }
 
 .view {
-    float: left;
+    float: inline-start;
 }
