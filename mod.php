@@ -57,5 +57,19 @@
         <h4>COPYRIGHT © Abiral Dahal</h4>
         <h5>2024</h5>
     </footer>
+
+
+    <script>
+        function pito() {
+            var fileInput = document.getElementById('foto');
+            var selectedFile = document.getElementById('selectedFile');
+
+            if (fileInput.files.length > 0) {
+                selectedFile.innerHTML = 'Archivo seleccionado: ' + fileInput.files[0].name;
+            } else {
+                selectedFile.innerHTML = '';
+            }
+        }
+    </script>
 </body>
 </html>
