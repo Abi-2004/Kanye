@@ -43,7 +43,7 @@
                     echo "<td class='imgag'><img src='" . $noticia['img'] . "' alt='holaa'></td>";
                     echo "<td>" . $noticia['titulo'] . "</td>";
                     echo "<td>" . $noticia['fecha'] . "</td>";
-                    echo "<td><a href='modificar.php?id_not=" . $noticia['id_not'] . "'>✍️</a></td>";
+                    echo "<td><a href='mod.php?id_not=" . $noticia['id_not'] . "'>✍️</a></td>";
                     echo "<td><a href='eliminar.php?id_not=" . $noticia['id_not'] . "'>❌</a></td>";
                     echo "</tr>";
                     
