@@ -2,10 +2,10 @@
     // Verificar si se recibió un ID válido
     if(isset($_GET['id_not']) && !empty($_GET['id_not'])) {
         // Incluir el archivo con las funciones de base de datos
-        include_once "funciones.php";
+        include_once "bbdd.php";
 
         // Obtener el ID de la noticia a eliminar desde la URL
-        $idNoticia = $_GET['id'];
+        $idNoticia = $_GET['id_not'];
 
         // Llamar a la función para eliminar la noticia
         if(eliminarNoticia($idNoticia)) {
