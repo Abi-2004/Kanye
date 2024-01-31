@@ -46,6 +46,7 @@
             header("location: index.php");
         }
         ?>
+        <a href="https://www.freecounterstat.com" title="website hit counter"><img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=st3frdb4xub6l2lg1xbsmjc3ce33cu4g" border="0" title="website hit counter" alt="website hit counter"></a>
     </div>
 
     <footer>
