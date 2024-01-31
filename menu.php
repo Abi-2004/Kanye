@@ -25,8 +25,13 @@ echo '<div class="barra">
           }
           
           
-         
-         echo' <a href="reg.php">Registrar</a>';
+          if(isset($user) == true)
+          {
+            echo' <a href="reg.php">Mi noticias</a>';
+          }else{
+              echo '<a href="pub.php">Publicar</a>';
+             }
+        
 
          
           session_start();
