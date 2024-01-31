@@ -5,6 +5,7 @@ table {
     font-size: 18px;
     margin: auto;
     border-radius: 100px;
+    margin-bottom: 3cm;
   }
   
   th, td {
@@ -29,5 +30,5 @@ table {
     position: fixed;
     bottom: 0;
     width: 100%;
-    margin-top: 3cm;
+    
   }
