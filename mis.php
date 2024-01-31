@@ -13,7 +13,28 @@
     </header>
     <?php include_once "menu.php"; ?>
 
-
+    <table>
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Título</th>
+                <th>Contenido</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se agregarán las filas de datos -->
+            <tr>
+                <td> <!-- Aquí iría la URL de la foto o la etiqueta img --> </td>
+                <td> <!-- Aquí iría el título del contenido --> </td>
+                <td> <!-- Aquí iría el contenido --> </td>
+                <td> <!-- Aquí iría el botón de modificar --> </td>
+                <td> <!-- Aquí iría el botón de eliminar --> </td>
+            </tr>
+            <!-- Puedes agregar más filas de datos según sea necesario -->
+        </tbody>
+    </table>
 
 
     <footer>
