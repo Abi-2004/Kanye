@@ -50,7 +50,7 @@
                 }
             } else {
                 // Si el usuario no está autenticado, redirigir a la página de inicio de sesión
-                header("Location: login.php");
+                header("Location: log.php");
                 exit(); // Detener la ejecución del script
             }
         ?>
