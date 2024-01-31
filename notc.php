@@ -18,7 +18,7 @@
         <h1>Noticia</h1>
     </header>
 
-    <?php include_once 'menu.php'; ?>
+    <?php include_once "menu.php"; ?>
 
     <div class="content">
         <?php
