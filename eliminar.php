@@ -9,7 +9,6 @@
 
         // Llamar a la función para eliminar la noticia
         if(eliminarNoticia($idNoticia)) {
-            // Si la eliminación fue exitosa, redirigir a la página de inicio o a una página de éxito
             header("Location: index.php");
             exit();
         } else {
