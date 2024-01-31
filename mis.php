@@ -36,7 +36,6 @@
                 // Obtener el ID del usuario
                 $id = obtenerId($user);
                 include_once "bbdd.php";
-                var_dump($id);
                 $noticiasUsuario = getNoticiasByUsuario($id);
 
                 foreach ($noticiasUsuario as $noticia) {
