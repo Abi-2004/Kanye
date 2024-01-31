@@ -46,6 +46,52 @@
     }
 
 
+    function getNoticiasByUsuario($idUsuario) {
+        $mysqli = connect_database();
+        
+        // Preparar la consulta SQL con una sentencia preparada
+        $sql = "SELECT id_not, titulo, img, content, fecha FROM noticias WHERE id_aut = ?";
+        $sentencia = $mysqli->prepare($sql);
+        if (!$sentencia) {
+            die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
+        }
+        
+        // Vincular el parámetro
+        $sentencia->bind_param("i", $idUsuario);
+        
+        // Ejecutar la consulta
+        $ejecucion = $sentencia->execute();
+        if (!$ejecucion) {
+            die("Fallo en la ejecución: " . $sentencia->error);
+        }
+        
+        // Vincular las variables de resultado
+        $sentencia->bind_result($id_not, $titulo, $img, $content, $fecha);
+        
+        // Array para almacenar las noticias
+        $noticias = array();
+        
+        // Recorrer el resultado y almacenar las noticias en el array
+        while ($sentencia->fetch()) {
+            $noticia = array(
+                'id_not' => $id_not,
+                'titulo' => $titulo,
+                'img' => $img,
+                'content' => $content,
+                'fecha' => $fecha
+            );
+            $noticias[] = $noticia;
+        }
+        
+        // Cerrar la sentencia y la conexión a la base de datos
+        $sentencia->close();
+        $mysqli->close();
+        
+        return $noticias;
+    }
+    
+
+
     
     function obtenerId($user) {
         $mysqli = connect_database();

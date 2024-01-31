@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Kanye West</h1>
+        <h1>Mis noticias</h1>
     </header>
     <?php include_once "menu.php"; ?>
 
@@ -24,19 +24,37 @@
                 <th>Eliminar</th>
             </tr>
         </thead>
-        <tbody>
-            <!-- Aquí se agregarán las filas de datos -->
-            <tr>
-                <td> <!-- Aquí iría la URL de la foto o la etiqueta img --> </td>
-                <td> <!-- Aquí iría el título del contenido --> </td>
-                <td> <!-- Aquí iría el contenido --> </td>
-                <td> <!-- Aquí iría el botón de modificar --> </td>
-                <td> <!-- Aquí iría el botón de eliminar --> </td>
-            </tr>
-            <!-- Puedes agregar más filas de datos según sea necesario -->
-        </tbody>
-    </table>
 
+        <?php
+            // Iniciar la sesión
+            session_start();
+
+            // Verificar si el usuario está autenticado
+            if(isset($_SESSION["user"])) {
+                // Obtener el usuario de la sesión
+                $user = $_SESSION["user"];
+                // Obtener el ID del usuario
+                $id = obtenerId($user);
+                // Obtener las noticias del usuario actual
+                $noticiasUsuario = getNoticiasByUsuario($id);
+
+                // Iterar sobre las noticias y mostrarlas en la tabla
+                foreach ($noticiasUsuario as $noticia) {
+                    echo "<tr>";
+                    echo "<td>" . $noticia['foto'] . "</td>";
+                    echo "<td>" . $noticia['titulo'] . "</td>";
+                    echo "<td>" . $noticia['contenido'] . "</td>";
+                    echo "<td><a href='modificar.php?id=" . $noticia['id'] . "'>Modificar</a></td>";
+                    echo "<td><a href='eliminar.php?id=" . $noticia['id'] . "'>Eliminar</a></td>";
+                    echo "</tr>";
+                }
+            } else {
+                // Si el usuario no está autenticado, redirigir a la página de inicio de sesión
+                header("Location: login.php");
+                exit(); // Detener la ejecución del script
+            }
+        ?>
+    </table>
 
     <footer>
         <h4>COPYRIGHT © Abiral Dahal</h4>
