@@ -374,8 +374,48 @@ function getNoticiaById($id) {
     
     return $noticia;
 }
+
+
+function modificarNoticia($idNoticia, $titulo, $contenido, $nuevaImagen = null) {
+    $mysqli = connect_database();
+
+    // Verificar si se seleccionó una nueva imagen
+    if ($nuevaImagen !== null) {
+        // Si se seleccionó una nueva imagen, actualizar también la imagen en la base de datos
+        $sql = "UPDATE noticias SET titulo = ?, content = ?, img = ? WHERE id_not = ?";
+    } else {
+        // Si no se seleccionó una nueva imagen, actualizar solo el título y el contenido
+        $sql = "UPDATE noticias SET titulo = ?, content = ? WHERE id_not = ?";
+    }
+
+    // Preparar la consulta SQL con una sentencia preparada
+    $sentencia = $mysqli->prepare($sql);
+    if (!$sentencia) {
+        die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
+    }
+
+    // Vincular los parámetros de la consulta según sea necesario
+    if ($nuevaImagen !== null) {
+        $sentencia->bind_param("sssi", $titulo, $contenido, $nuevaImagen, $idNoticia);
+    } else {
+        $sentencia->bind_param("ssi", $titulo, $contenido, $idNoticia);
+    }
+
+    // Ejecutar la consulta
+    $ejecucion = $sentencia->execute();
+    if (!$ejecucion) {
+        die("Fallo en la ejecución: " . $sentencia->error);
+    }
+
+    // Cerrar la sentencia y la conexión a la base de datos
+    $sentencia->close();
+    $mysqli->close();
+}
+
+
+
 ?>
     
 
 
-    ?>
+
