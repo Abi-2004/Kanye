@@ -93,8 +93,11 @@ h4, h5 {
 }
 
 .view {
+    margin-right: 10cm;
+    margin-top: 1cm;
     display: flex;
     align-items: center;
+    
 }
 
 .view h2 {
