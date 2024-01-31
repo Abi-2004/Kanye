@@ -27,7 +27,7 @@ echo '<div class="barra">
           
           if(isset($user) == true)
           {
-            echo' <a href="reg.php">Mi noticias</a>';
+            echo' <a href="mis.php">Mi noticias</a>';
           }else{
               echo '<a href="pub.php">Publicar</a>';
              }
