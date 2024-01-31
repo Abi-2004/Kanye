@@ -17,7 +17,7 @@
     <table>
         <thead>
             <tr>
-                <th>Foto</th>
+                <th>Foto  > </th>
                 <th>Título</th>
                 <th>Contenido</th>
                 <th>Modificar</th>
@@ -40,12 +40,13 @@
 
                 foreach ($noticiasUsuario as $noticia) {
                     echo "<tr>";
-                    echo "<td class='img'>" . $noticia['img'] . "</td>";
+                    echo "<td class='img'><img src='" . $noticia['img'] . "' alt='holaa'></td>";
                     echo "<td>" . $noticia['titulo'] . "</td>";
                     echo "<td>" . $noticia['contenido'] . "</td>";
                     echo "<td><a href='modificar.php?id_not=" . $noticia['id_not'] . "'>Modificar</a></td>";
                     echo "<td><a href='eliminar.php?id_not=" . $noticia['id_not'] . "'>Eliminar</a></td>";
                     echo "</tr>";
+                    
                 }
             } else {
                
