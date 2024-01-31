@@ -46,6 +46,43 @@
     }
 
 
+
+    function eliminarNoticia($idNoticia) {
+        // Establecer conexión a la base de datos
+        $conexion = connect_database();
+
+        // Preparar la consulta SQL para eliminar la noticia
+        $sql = "DELETE FROM noticias WHERE id_not = ?";
+
+        // Preparar la sentencia
+        $stmt = $conexion->prepare($sql);
+        if (!$stmt) {
+            die("Error al preparar la consulta: " . $conexion->error);
+        }
+
+        // Vincular el parámetro ID
+        $stmt->bind_param("i", $idNoticia);
+
+        // Ejecutar la consulta
+        $ejecucion = $stmt->execute();
+        if (!$ejecucion) {
+            die("Error al ejecutar la consulta: " . $stmt->error);
+        }
+
+        // Verificar si se eliminó al menos una fila
+        if ($stmt->affected_rows > 0) {
+            // Cerrar la sentencia y la conexión
+            $stmt->close();
+            $conexion->close();
+            return true; // La noticia se eliminó correctamente
+        } else {
+            // Cerrar la sentencia y la conexión
+            $stmt->close();
+            $conexion->close();
+            return false; // La noticia no se eliminó (puede que no exista)
+        }
+    }
+
     function getNoticiasByUsuario($idUsuario) {
         $mysqli = connect_database();
         
