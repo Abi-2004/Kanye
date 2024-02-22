@@ -20,7 +20,7 @@ echo '<div class="barra">
           $user = $_SESSION["user"];
           if(isset($user) == true)
           {
-             echo '<a href="reg.php">Registrar</a>';
+             echo '<a href="pub.php">Publicar</a>';
           
           }
           
@@ -29,7 +29,7 @@ echo '<div class="barra">
           {
             echo' <a href="mis.php">Mi noticias</a>';
           }else{
-              echo '<a href="pub.php">Publicar</a>';
+              echo '<a href="reg.php">Registrar</a>';
              }
         
 
