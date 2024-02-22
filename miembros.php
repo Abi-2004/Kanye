@@ -16,15 +16,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-    // Función para formatear la fecha al formato YYYY-MM-DD
-    function formatDate(dateString) {
-        var dateObj = new Date(dateString);
-        var year = dateObj.getFullYear();
-        var month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
-        var day = ('0' + dateObj.getDate()).slice(-2);
-        return year + '-' + month + '-' + day;
-    }
-
     // Función para validar reCAPTCHA
     function validateRecaptcha() {
         var response = grecaptcha.getResponse();
@@ -40,9 +31,6 @@
         }
 
         // If the reCAPTCHA is verified, you can optionally do further validation here
-
-        // Format the date before submitting the form
-        document.getElementById("fecha").value = formatDate(document.getElementById("fecha").value);
 
         return true; // Allow form submission
     }
