@@ -25,7 +25,7 @@
 
     <div class="container">
         <h2>Registro de Miembros</h2>
-        <form id="registration-form" action="registrar_miembro.php" method="post" onsubmit="return validateRecaptcha()">
+        <form id="registration-form" action="regmiembro.php" method="post" onsubmit="return validateRecaptcha()">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
