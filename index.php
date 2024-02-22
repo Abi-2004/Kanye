@@ -107,6 +107,8 @@ $noticias = noticia();
 
 
   <?php
+  include_once 'bbdd.php';
+
 $detallesMiembros = obtenerDetalleMiembros();
 
 if (!empty($detallesMiembros)) {
