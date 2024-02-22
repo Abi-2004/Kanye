@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     var_dump($nombre, $instrumento, $fecha, $ciudad);
+    
     if (insertarMiembro($nombre, $instrumento, $fecha, $ciudad)) {
         header("Location: index.php");
         exit();
