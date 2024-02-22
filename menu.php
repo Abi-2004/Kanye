@@ -44,14 +44,17 @@ echo '<div class="barra">
             echo  '<a href="logout.php">Salir </a> ';
           }
           
-          session_start();
-          $user = $_SESSION["user"];
-          if(isset($user) == true)
-          {
-          echo' <a href="miembros.php">añadir miembros</a>';
-          }
+        
          
-     echo'  </ul>
+     echo'  </ul>';
+     session_start();
+     $user = $_SESSION["user"];
+     if(isset($user) == true)
+     {
+     echo' <a href="miembros.php">añadir miembros</a>';
+     }
+
+echo '
       </li>
       
     </div>';
