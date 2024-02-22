@@ -176,17 +176,17 @@
     {
         $mysqli = new mysqli("44.195.114.107", "abi", "Dahal123", "kanye");
     
-        // Check if there is a connection error
+        
         if ($mysqli->connect_errno) {
-            return false; // Connection failed
+            return false; 
         }
     
-        // Check if the server is alive
+       
         if ($mysqli->ping()) {
-            $mysqli->close(); // Close the connection
-            return true; // Connection successful
+            $mysqli->close(); 
+            return true; 
         } else {
-            return false; // Server is not responding
+            return false; 
         }
     }
     
@@ -261,9 +261,9 @@
             echo "Fallo al asociar parámetros " . $mysqli->errno;
         }
     
-        $sentencia->fetch(); // Fetch the result
+        $sentencia->fetch(); 
     
-        $sentencia->close();  //Close the statement//
+        $sentencia->close();  
         $mysqli->close();
         
         $nombreCompleto = $nombre . ' ' . $apellido;
@@ -299,7 +299,7 @@
         echo "Fallo al asociar parámetros " . $mysqli->errno;
     }
 
-    $sentencia->fetch(); // Fetch the result
+    $sentencia->fetch(); 
 
     $sentencia->close();
     $mysqli->close();
@@ -320,7 +320,7 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
         die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
     }
 
-    // Bind parameters and execute the query
+   
     $sentencia->bind_param("ssss", $titulo, $contenido, $imagen, $idUsuario);
 
     $ejecucion = $sentencia->execute();
@@ -328,7 +328,7 @@ function insertarNoticia($titulo, $contenido, $imagen, $idUsuario)
         die("Fallo en la ejecución: " . $mysqli->errno);
     }
 
-    // Close the statement and the connection
+   
     $sentencia->close();
     $mysqli->close();
 }
@@ -372,35 +372,35 @@ function getNoticiaById($id) {
 function modificarNoticia($idNoticia, $titulo, $contenido, $nuevaImagen = null) {
     $mysqli = connect_database();
 
-    // Verificar si se seleccionó una nueva imagen
+    
     if ($nuevaImagen !== null) {
-        // Si se seleccionó una nueva imagen, actualizar también la imagen en la base de datos
+       
         $sql = "UPDATE noticias SET titulo = ?, content = ?, img = ? WHERE id_not = ?";
     } else {
-        // Si no se seleccionó una nueva imagen, actualizar solo el título y el contenido
+
         $sql = "UPDATE noticias SET titulo = ?, content = ? WHERE id_not = ?";
     }
 
-    // Preparar la consulta SQL con una sentencia preparada
+   
     $sentencia = $mysqli->prepare($sql);
     if (!$sentencia) {
         die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
     }
 
-    // Vincular los parámetros de la consulta según sea necesario
+   
     if ($nuevaImagen !== null) {
         $sentencia->bind_param("sssi", $titulo, $contenido, $nuevaImagen, $idNoticia);
     } else {
         $sentencia->bind_param("ssi", $titulo, $contenido, $idNoticia);
     }
 
-    // Ejecutar la consulta
+   
     $ejecucion = $sentencia->execute();
     if (!$ejecucion) {
         die("Fallo en la ejecución: " . $sentencia->error);
     }
 
-    // Cerrar la sentencia y la conexión a la base de datos
+  
     $sentencia->close();
     $mysqli->close();
 }
