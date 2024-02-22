@@ -411,7 +411,7 @@ function modificarNoticia($idNoticia, $titulo, $contenido, $nuevaImagen = null) 
 function obtenerDetalleMiembros() {
     $mysqli = connect_database();
     
-    $sql = "SELECT nombre, instrumento, fecha, ciudad FROM miembros ORDER BY fecha ASC";
+    $sql = "SELECT nombre, instrumento, fecha, ciudad FROM miebros ORDER BY fecha ASC";
     $sentencia = $mysqli->prepare($sql);
     if (!$sentencia) {
         die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
