@@ -407,6 +407,43 @@ function modificarNoticia($idNoticia, $titulo, $contenido, $nuevaImagen = null) 
 
 
 
+
+function obtenerDetalleMiembros() {
+    $mysqli = connect_database();
+    
+    $sql = "SELECT nombre, instrumento, fecha, ciudad FROM miembro ORDER BY fecha ASC";
+    $sentencia = $mysqli->prepare($sql);
+    if (!$sentencia) {
+        die("Fallo en la preparación de la sentencia: " . $mysqli->errno);
+    }
+    
+    $ejecucion = $sentencia->execute();
+    if (!$ejecucion) {
+        die("Fallo en la ejecución: " . $sentencia->error);
+    }
+    
+    $sentencia->bind_result($nombre, $instrumento, $fecha, $ciudad);
+    
+    $detallesMiembros = array();
+    
+    while ($sentencia->fetch()) {
+        $detalleMiembro = array(
+            'nombre' => $nombre,
+            'instrumento' => $instrumento,
+            'fecha' => $fecha,
+            'ciudad' => $ciudad
+        );
+        $detallesMiembros[] = $detalleMiembro;
+    }
+    
+    $sentencia->close();
+    $mysqli->close();
+    
+    return $detallesMiembros;
+}
+
+
+
 ?>
     
 

@@ -93,35 +93,38 @@ $noticias = noticia();
   </div>
 
 <div class="fechgir">
-<h2>Proximas Giras</h2>
-<p> Estas son las possibles proximas giras de Kanye West:</p>
+<h2>Miembros</h2>
+<p> Estos son los miebros que aparecen en le nuevo album:</p>
 
 
 <table> 
 <tr> 
-  <th>Lugar</th>
-  <th>Fecha</th>
-  <th>Entradas</th>
+  <th>Nombre</th>
+  <th>instrumeto</th>
+  <th>Fecha_nac</th>
+  <th>Cuidad</th>
   </tr>
 
 
-<tr>
-    <td>BEC</td>
-    <td>31/2/2027</td>
-    <td><i class="bi bi-cart"></i></td>  
-</tr>
+  <?php
+$detallesMiembros = obtenerDetalleMiembros();
 
-<tr>
-  <td>Santiago Bernabeu</td>
-  <td>31/04/2030</td>
-  <td><i class="bi bi-cart"></i></td> 
-</tr>
+if (!empty($detallesMiembros)) {
+    foreach ($detallesMiembros as $miembro) {
+        echo "<tr>";
+        echo "<td>" . $miembro['nombre'] . "</td>";
+        echo "<td>" . $miembro['instrumento'] . "</td>";
+        echo "<td>" . $miembro['fecha'] . "</td>";
+        echo "<td>" . $miembro['ciudad'] . "</td>";
+        echo "</tr>";
+    }
+} else {
+    echo "<tr><td colspan='4'>Error</td></tr>";
+}
 
-<tr>
-  <td>Bilbao Arena</td>
-  <td>20/04/2069</td>
-  <td><i class="bi bi-cart"></i></td> 
-</tr>
+?>
+
+
 
 </table> 
 
