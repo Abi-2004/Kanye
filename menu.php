@@ -51,7 +51,7 @@ echo '<div class="barra">
      $user = $_SESSION["user"];
      if(isset($user) == true)
      {
-     echo' <a href="miembros.php">añadir miembros</a>';
+     echo' <a href="miembros.php">Miembros</a>';
      }
 
 echo '
