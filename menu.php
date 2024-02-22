@@ -12,7 +12,7 @@ echo '<div class="barra">
       <a href="bio.html">BioGrafia</a>
       <a href="disco.html">Discografia</a>
       <a href="fan.html">Fanclub</a>
-            <li class="dropdown-li">
+      <li class="dropdown-li">
         <a href="#">Autor</a>
         <ul class="dropdown">';
 
@@ -46,16 +46,16 @@ echo '<div class="barra">
           
         
          
-     echo'  </ul>';
-     session_start();
-     $user = $_SESSION["user"];
-     if(isset($user) == true)
-     {
-     echo' <a href="miembros.php">Miembros</a>';
-     }
+     echo '</ul>
+ 
+      </li>';
 
-echo '
-      </li>
+      session_start();
+      $user = $_SESSION["user"];
+      if(isset($user) == true)
+      {
+      echo '<li><a href="miembros.php">Miembros</a></li>';
+      }
       
-    </div>';
+    echo '</div>';
 ?>
