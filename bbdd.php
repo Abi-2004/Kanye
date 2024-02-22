@@ -446,7 +446,7 @@ function obtenerDetalleMiembros() {
 function insertarMiembro($nombre, $instrumento, $fecha, $ciudad) {
     $mysqli = connect_database();
 
-    $sql = "INSERT INTO miembros (nombre, instrumento, fecha, ciudad) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO miebros (nombre, instrumento, fecha, ciudad) VALUES (?, ?, ?, ?)";
     $sentencia = $mysqli->prepare($sql);
     if (!$sentencia) {
         die("Error al preparar la consulta: " . $mysqli->errno);
