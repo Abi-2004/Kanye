@@ -28,7 +28,6 @@ echo '<div class="barra">
           if(isset($user) == true)
           {
             echo' <a href="mis.php">Mi noticias</a>';
-            echo' <a href="miembros.php">añadir miembros</a>';
           }else{
               echo '<a href="reg.php">Registrar</a>';
              }
@@ -45,7 +44,12 @@ echo '<div class="barra">
             echo  '<a href="logout.php">Salir </a> ';
           }
           
-
+          session_start();
+          $user = $_SESSION["user"];
+          if(isset($user) == true)
+          {
+          echo' <a href="miembros.php">añadir miembros</a>';
+          }
          
      echo'  </ul>
       </li>
