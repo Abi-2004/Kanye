@@ -443,6 +443,28 @@ function obtenerDetalleMiembros() {
 }
 
 
+function insertarMiembro($nombre, $instrumento, $fecha, $ciudad) {
+    $mysqli = connect_database();
+
+    $sql = "INSERT INTO miembro (nombre, instrumento, fecha, ciudad) VALUES (?, ?, ?, ?)";
+    $sentencia = $mysqli->prepare($sql);
+    if (!$sentencia) {
+        die("Error al preparar la consulta: " . $mysqli->errno);
+    }
+
+    $sentencia->bind_param("ssss", $nombre, $instrumento, $fecha, $ciudad);
+
+    $ejecucion = $sentencia->execute();
+    if (!$ejecucion) {
+        die("Error al ejecutar la consulta: " . $sentencia->error);
+    }
+
+    $sentencia->close();
+    $mysqli->close();
+
+    return true;
+}
+
 
 ?>
     
