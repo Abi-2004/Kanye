@@ -369,7 +369,7 @@ function getNoticiaById($id) {
 }
 
 
-function modificarNoticia($idNoticia, $titulo, $contenido, $nuevaImagen = null) {
+function modificarNoticia($idNoticia, $titulo, $contenido, $nuevaImagen) {
     $mysqli = connect_database();
 
     
