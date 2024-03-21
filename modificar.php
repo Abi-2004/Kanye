@@ -19,10 +19,14 @@ if (isset($_POST["submit"]) && isset($_POST["id_noticia"])) {
 
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] == 0) {
         $directorioImagenes = "img/";
-
-        $nombreImagen = $_FILES["foto"]["name"];
-        $rutaImagen = $directorioImagenes . $nombreImagen.date("Ymd_His") . "_" . explode(".",microtime(true))[1];
-
+    
+        $nombreImagen = basename($_FILES["foto"]["name"]);
+        $extension = pathinfo($nombreImagen, PATHINFO_EXTENSION);
+        $nombreImagenSinExtension = basename($nombreImagen, "." . $extension);
+        $nombreImagen = $nombreImagenSinExtension . "_" . date("Ymd_His") . "." . $extension;
+    
+        $rutaImagen = $directorioImagenes . $nombreImagen;
+    
         move_uploaded_file($_FILES["foto"]["tmp_name"], $rutaImagen);
     } else {
         $noticia = getNoticiaById($idNoticia);
