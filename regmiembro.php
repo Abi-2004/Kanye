@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("location: log.php");
+    exit(); 
+}
+
 include_once "bbdd.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
